@@ -59,6 +59,11 @@
     "ru": "Админ-панель",
     "en": "Admin panel"
   },
+  "nav.hikmat": {
+    "uz": "Hikmatlar",
+    "ru": "Мудрость",
+    "en": "Wisdom"
+  },
   "nav.consult": {
     "uz": "Mutaxassisga murojaat",
     "ru": "Обращение к специалисту",

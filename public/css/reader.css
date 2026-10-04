@@ -22,7 +22,8 @@
 }
 .reader[data-theme="sepia"] { --rd-bg: #E9DEC7; --rd-page: #F6EEDC; --rd-ink: #3B2E1B; --rd-ui: #F6EEDC; --rd-line: #D8C8A6; --rd-muted: #7C6A4C; }
 .reader[data-theme="gray"]  { --rd-bg: #CFD4D5; --rd-page: #E4E8E8; --rd-ink: #1D2A2E; --rd-ui: #E4E8E8; --rd-line: #B6BFC0; --rd-muted: #5C6A6E; }
-.reader[data-theme="night"] { --rd-bg: #0D1416; --rd-page: #162024; --rd-ink: #DCE6E6; --rd-ui: #162024; --rd-line: #2A3A3F; --rd-muted: #8AA0A4; }
+.reader[data-theme="night"],
+.reader[data-theme="dark"] { --rd-bg: #0D1416; --rd-page: #162024; --rd-ink: #DCE6E6; --rd-ui: #162024; --rd-line: #2A3A3F; --rd-muted: #8AA0A4; }
 
 /* -------------------------------------------------------------- toolbar */
 .rtop {

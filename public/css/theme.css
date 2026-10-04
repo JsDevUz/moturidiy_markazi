@@ -124,6 +124,28 @@ html[data-theme] .sidebar {
 html[data-theme="dark"] img,
 html[data-theme="dark"] .cover__img { filter: brightness(.92) contrast(1.02); }
 
+/* Tungi rejimda tugmalar va elementlar oqarib qolmasligi uchun tuzatishlar */
+html[data-theme="dark"] .btn--primary {
+  background: var(--brand);
+  color: #04353A;
+  border-color: transparent;
+}
+html[data-theme="dark"] .btn--primary:hover {
+  background: #05B6BA;
+  color: #04353A;
+}
+html[data-theme="dark"] .langswitch a[aria-current="true"] {
+  background: var(--brand);
+  color: #04353A;
+}
+html[data-theme="dark"] .speedset button[aria-pressed="true"] {
+  background: var(--brand);
+  color: #04353A;
+}
+html[data-theme="dark"] .qz__dot.is-on {
+  background: var(--brand);
+}
+
 * { box-sizing: border-box; }
 
 /* `hidden` atributi har doim ustun bo'lsin — .rstatus/.chip kabi
