@@ -1,157 +1,203 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { books } from '../data/db';
-import Hero from '../components/Hero';
-import HikmatBanner from '../components/HikmatBanner';
-import SectionsGrid from '../components/SectionsGrid';
+import { books, sections, hikmatlar } from '../data/db';
 import BookCard from '../components/BookCard';
-import { BookOpen, Headphones, Award, ArrowRight } from 'lucide-react';
+import { Icon, Shamsa } from '../components/Icons';
 
-export default function Home({ 
-  onNavigate, 
-  onSelectBook, 
-  onReadBook, 
-  onListenBook, 
-  onSelectSection,
-  savedBookIds,
-  onToggleSaveBook
-}) {
-  const { t } = useLanguage();
+export default function Home({ onNavigate, onSelectBook, onSelectSection }) {
+  const { t, getLoc } = useLanguage();
+  const [hikmatIdx, setHikmatIdx] = useState(0);
+  const [progressWidth, setProgressWidth] = useState(0);
+  const quotes = hikmatlar.slice(0, 6);
 
-  // Featured books (highest popularity)
-  const featuredBooks = [...books]
-    .sort((a, b) => (b.popularity || 0) - (a.popularity || 0))
-    .slice(0, 4);
+  // Auto-play hikmat slider with progress indicator
+  useEffect(() => {
+    let startTime = performance.now();
+    const duration = 10000; // 10 seconds per slide
 
-  // Audio books
-  const audioBooks = books.filter(b => b.has_audio).slice(0, 4);
+    const interval = setInterval(() => {
+      setHikmatIdx((prev) => (prev + 1) % quotes.length);
+      startTime = performance.now();
+    }, duration);
+
+    let animFrame;
+    const updateProgress = () => {
+      const elapsed = performance.now() - startTime;
+      const ratio = Math.min(1, elapsed / duration);
+      setProgressWidth(ratio * 100);
+      animFrame = requestAnimationFrame(updateProgress);
+    };
+    animFrame = requestAnimationFrame(updateProgress);
+
+    return () => {
+      clearInterval(interval);
+      cancelAnimationFrame(animFrame);
+    };
+  }, [hikmatIdx, quotes.length]);
+
+  const countBooks = (secId) => books.filter((b) => b.section === secId).length;
 
   return (
-    <div className="space-y-12">
+    <div className="wrap">
       
-      {/* Hero Section */}
-      <Hero 
-        onNavigate={onNavigate}
-        onSearchSubmit={(q) => {
-          onNavigate('catalog', { search: q });
-        }}
-      />
+      {/* ============ IMZO ELEMENTI: unvan — qo'lyozma sarlavha bezagi ============ */}
+      <section className="unwan">
+        <svg className="unwan__pattern" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <pattern id="girihNet" width="80" height="80" patternUnits="userSpaceOnUse">
+              <g fill="none" stroke="#2FA9B0" strokeWidth=".9" opacity=".38">
+                <path d="M40 6 49 31 74 40 49 49 40 74 31 49 6 40 31 31z"/>
+                <circle cx="40" cy="40" r="17"/>
+                <path d="M0 0h80v80H0z"/>
+              </g>
+            </pattern>
+            <radialGradient id="fade" cx="50%" cy="0%" r="90%">
+              <stop offset="0%" stopColor="#fff" stopOpacity=".55"/>
+              <stop offset="70%" stopColor="#fff" stopOpacity="0"/>
+            </radialGradient>
+            <mask id="fadeMask"><rect width="1200" height="460" fill="url(#fade)"/></mask>
+          </defs>
+          <rect width="1200" height="460" fill="url(#girihNet)" mask="url(#fadeMask)"/>
+          <g stroke="#E3CE96" fill="none" opacity=".3">
+            <path d="M100 30h1000M100 430h1000" strokeWidth="1"/>
+            <path d="M140 44h920M140 416h920" strokeWidth=".6"/>
+          </g>
+        </svg>
 
-      {/* Quote of the Day */}
-      <HikmatBanner />
+        <div className="unwan__inner">
+          <div className="u-eyebrow unwan__eyebrow">{t('home.eyebrow')}</div>
+          <img className="unwan__logo" src="/img/logo-256.png" alt="" />
+          <h1 className="unwan__title">{t('brand.name')}</h1>
+          <p className="unwan__lede">{t('footer.about')}</p>
 
-      {/* Featured Books Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-8">
-          <div>
-            <div className="flex items-center gap-2 text-emerald-700 dark:text-emerald-400 text-xs font-bold uppercase tracking-wider mb-1">
-              <BookOpen className="w-4 h-4" />
-              <span>{t('brand.name')}</span>
-            </div>
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
-              {t('home.featured_title')}
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
-              {t('home.featured_desc')}
-            </p>
+          <div className="unwan__cta">
+            <a 
+              className="btn btn--brand" 
+              href="#catalog"
+              onClick={(e) => { e.preventDefault(); onNavigate('catalog'); }}
+            >
+              <Icon name="grid" size={17} /> {t('home.all_catalog')}
+            </a>
+            <a 
+              className="btn btn--ghost" 
+              style={{ borderColor: 'rgba(227,206,150,.4)', color: '#F1E8D2' }}
+              href="#about"
+              onClick={(e) => { e.preventDefault(); onNavigate('about'); }}
+            >
+              {t('common.details')}
+            </a>
           </div>
 
-          <button
-            onClick={() => onNavigate('catalog')}
-            className="flex items-center gap-1.5 text-xs font-bold text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300 transition-colors group"
-          >
-            <span>{t('common.all')}</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {featuredBooks.map((book) => (
-            <BookCard
-              key={book.id}
-              book={book}
-              onSelect={onSelectBook}
-              onRead={onReadBook}
-              onListen={onListenBook}
-              isSaved={savedBookIds.includes(book.id)}
-              onToggleSave={onToggleSaveBook}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* Scholarly Sections */}
-      <SectionsGrid onSelectSection={onSelectSection} />
-
-      {/* Audiobooks Showcase Section */}
-      {audioBooks.length > 0 && (
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-8">
-            <div>
-              <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400 text-xs font-bold uppercase tracking-wider mb-1">
-                <Headphones className="w-4 h-4" />
-                <span>{t('nav.audiobooks')}</span>
+          {/* Kun hikmati slider */}
+          {quotes.length > 0 && (
+            <div className="unwan__quote hikmat" id="hikmat">
+              <span className="u-eyebrow">{t('home.hikmat')}</span>
+              <div className="hikmat__viewport">
+                <div 
+                  className="hikmat__track" 
+                  id="hikmatTrack"
+                  style={{ 
+                    display: 'flex', 
+                    transform: `translateX(-${hikmatIdx * 100}%)`,
+                    transition: 'transform 0.4s ease'
+                  }}
+                >
+                  {quotes.map((q) => (
+                    <figure className="hikmat__slide" key={q.id}>
+                      <p>«{getLoc(q.text)}»</p>
+                      <cite>— {getLoc(q.source)}</cite>
+                    </figure>
+                  ))}
+                </div>
               </div>
-              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
-                {t('home.audio_title')}
-              </h2>
-              <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
-                {t('home.audio_desc')}
-              </p>
+
+              {/* Progress Dots */}
+              <div className="hikmat__dots" id="hikmatDots" role="tablist" aria-label={t('home.hikmat')}>
+                {quotes.map((q, idx) => {
+                  const isCurrent = idx === hikmatIdx;
+                  const isDone = idx < hikmatIdx;
+                  return (
+                    <button
+                      key={q.id}
+                      role="tab"
+                      aria-selected={isCurrent ? 'true' : 'false'}
+                      className={isDone ? 'is-done' : ''}
+                      onClick={() => setHikmatIdx(idx)}
+                      aria-label={`${idx + 1}`}
+                    >
+                      <i 
+                        style={{ 
+                          width: isCurrent 
+                            ? `${progressWidth}%` 
+                            : isDone 
+                              ? '100%' 
+                              : '0%' 
+                        }} 
+                      />
+                    </button>
+                  );
+                })}
+              </div>
             </div>
-
-            <button
-              onClick={() => onNavigate('audiobooks')}
-              className="flex items-center gap-1.5 text-xs font-bold text-amber-600 dark:text-amber-400 hover:text-amber-700 transition-colors group"
-            >
-              <span>{t('common.all')}</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {audioBooks.map((book) => (
-              <BookCard
-                key={book.id}
-                book={book}
-                onSelect={onSelectBook}
-                onRead={onReadBook}
-                onListen={onListenBook}
-                isSaved={savedBookIds.includes(book.id)}
-                onToggleSave={onToggleSaveBook}
-              />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Interactive Quiz CTA Banner */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-amber-600 via-emerald-800 to-teal-900 p-8 sm:p-12 text-white shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="space-y-4 max-w-2xl text-center md:text-left">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-white/20 backdrop-blur-md uppercase tracking-wider">
-              <Award className="w-3.5 h-3.5 text-amber-300" />
-              {t('quiz.title')}
-            </span>
-            <h3 className="font-serif text-2xl sm:text-4xl font-bold leading-tight">
-              {t('home.quiz_banner_title')}
-            </h3>
-            <p className="text-sm sm:text-base text-emerald-100/90 leading-relaxed font-light">
-              {t('home.quiz_banner_desc')}
-            </p>
-          </div>
-
-          <div className="flex-shrink-0">
-            <button
-              onClick={() => onNavigate('quiz')}
-              className="px-8 py-4 rounded-2xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-sm tracking-wider uppercase shadow-xl hover:scale-105 transition-all flex items-center gap-2"
-            >
-              <span>{t('home.quiz_btn')}</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          </div>
+          )}
         </div>
       </section>
+
+      {/* STATLINE */}
+      <div className="statline reveal is-in">
+        <div><b>{books.length}</b><span>{t('home.stat_books')}</span></div>
+        <div><b>{books.filter(b => b.has_audio).length}</b><span>{t('home.stat_audio')}</span></div>
+        <div><b>{sections.length}</b><span>{t('home.stat_sections')}</span></div>
+        <div><b>3</b><span>{t('home.stat_langs')}</span></div>
+      </div>
+
+      {/* =========================== 6 ta asosiy bo'lim =========================== */}
+      <div className="sechead">
+        <div>
+          <h2>{t('home.sections_title')}</h2>
+          <p className="u-muted u-small" style={{ margin: '4px 0 0' }}>
+            {t('home.sections_sub')}
+          </p>
+        </div>
+      </div>
+
+      <div className="grid-sections">
+        {sections.filter(s => s.on_home).map((s) => (
+          <a 
+            key={s.id}
+            className="seccard tilt reveal is-in" 
+            href={`#section-${s.id}`}
+            onClick={(e) => { e.preventDefault(); onSelectSection(s.id); }}
+          >
+            <Shamsa className="seccard__medallion" />
+            <span className="seccard__icon"><Icon name={s.icon || 'star'} size={22} /></span>
+            <h3>{getLoc(s.title)}</h3>
+            <p>{getLoc(s.lead)}</p>
+            <span className="seccard__count">{countBooks(s.id)} {t('common.books')} →</span>
+          </a>
+        ))}
+      </div>
+
+      {/* ============================ Yangi qo'shilganlar ========================= */}
+      <div className="sechead" style={{ marginTop: '48px' }}>
+        <h2>{t('home.new_title')}</h2>
+        <a 
+          href="#catalog"
+          onClick={(e) => { e.preventDefault(); onNavigate('catalog'); }}
+        >
+          {t('home.all_catalog')} →
+        </a>
+      </div>
+
+      <div className="grid-books">
+        {books.slice(0, 8).map((b) => (
+          <BookCard 
+            key={b.id} 
+            book={b} 
+            onSelect={onSelectBook}
+          />
+        ))}
+      </div>
 
     </div>
   );

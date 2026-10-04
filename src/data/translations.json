@@ -1,0 +1,2042 @@
+{
+  "brand.name": {
+    "uz": "Moturidiy markazi",
+    "ru": "Центр Матуриди",
+    "en": "Maturidi Centre"
+  },
+  "brand.sub": {
+    "uz": "Raqamli kutubxona",
+    "ru": "Цифровая библиотека",
+    "en": "Digital Library"
+  },
+  "nav.menu": {
+    "uz": "Navigatsiya",
+    "ru": "Навигация",
+    "en": "Navigation"
+  },
+  "nav.home": {
+    "uz": "Bosh sahifa",
+    "ru": "Главная",
+    "en": "Home"
+  },
+  "nav.sections": {
+    "uz": "Bo‘limlar",
+    "ru": "Разделы",
+    "en": "Sections"
+  },
+  "nav.library": {
+    "uz": "Kutubxona",
+    "ru": "Библиотека",
+    "en": "Library"
+  },
+  "nav.catalog": {
+    "uz": "Katalog",
+    "ru": "Каталог",
+    "en": "Catalogue"
+  },
+  "nav.shop": {
+    "uz": "Do‘kon",
+    "ru": "Магазин",
+    "en": "Store"
+  },
+  "nav.saved": {
+    "uz": "Saqlanganlar",
+    "ru": "Сохранённые",
+    "en": "Saved"
+  },
+  "nav.cabinet": {
+    "uz": "Shaxsiy kabinet",
+    "ru": "Личный кабинет",
+    "en": "My account"
+  },
+  "nav.account": {
+    "uz": "Hisob",
+    "ru": "Аккаунт",
+    "en": "Account"
+  },
+  "nav.admin": {
+    "uz": "Admin panel",
+    "ru": "Админ-панель",
+    "en": "Admin panel"
+  },
+  "nav.consult": {
+    "uz": "Mutaxassisga murojaat",
+    "ru": "Обращение к специалисту",
+    "en": "Ask a specialist"
+  },
+  "nav.close": {
+    "uz": "Menyuni yopish",
+    "ru": "Закрыть меню",
+    "en": "Close menu"
+  },
+  "nav.open": {
+    "uz": "Menyuni ochish",
+    "ru": "Открыть меню",
+    "en": "Open menu"
+  },
+  "nav.lang": {
+    "uz": "Til",
+    "ru": "Язык",
+    "en": "Language"
+  },
+  "common.search": {
+    "uz": "Qidirish",
+    "ru": "Поиск",
+    "en": "Search"
+  },
+  "common.search_ph": {
+    "uz": "Kitob nomi, muallif yoki kalit so‘z",
+    "ru": "Название книги, автор или ключевое слово",
+    "en": "Book title, author or keyword"
+  },
+  "common.read": {
+    "uz": "O‘qish",
+    "ru": "Читать",
+    "en": "Read"
+  },
+  "common.listen": {
+    "uz": "Tinglash",
+    "ru": "Слушать",
+    "en": "Listen"
+  },
+  "common.save": {
+    "uz": "Saqlash",
+    "ru": "Сохранить",
+    "en": "Save"
+  },
+  "common.saved": {
+    "uz": "Saqlandi",
+    "ru": "Сохранено",
+    "en": "Saved"
+  },
+  "common.buy": {
+    "uz": "Sotib olish",
+    "ru": "Купить",
+    "en": "Buy"
+  },
+  "common.details": {
+    "uz": "Batafsil",
+    "ru": "Подробнее",
+    "en": "Details"
+  },
+  "common.all": {
+    "uz": "Barchasi",
+    "ru": "Все",
+    "en": "All"
+  },
+  "common.free": {
+    "uz": "Bepul",
+    "ru": "Бесплатно",
+    "en": "Free"
+  },
+  "common.paid": {
+    "uz": "Pullik",
+    "ru": "Платно",
+    "en": "Paid"
+  },
+  "common.audio": {
+    "uz": "Audio",
+    "ru": "Аудио",
+    "en": "Audio"
+  },
+  "common.pages": {
+    "uz": "bet",
+    "ru": "стр.",
+    "en": "pages"
+  },
+  "common.author": {
+    "uz": "Muallif",
+    "ru": "Автор",
+    "en": "Author"
+  },
+  "common.year": {
+    "uz": "Yil",
+    "ru": "Год",
+    "en": "Year"
+  },
+  "common.language": {
+    "uz": "Til",
+    "ru": "Язык",
+    "en": "Language"
+  },
+  "common.category": {
+    "uz": "Kategoriya",
+    "ru": "Категория",
+    "en": "Category"
+  },
+  "common.section": {
+    "uz": "Bo‘lim",
+    "ru": "Раздел",
+    "en": "Section"
+  },
+  "common.back": {
+    "uz": "Orqaga",
+    "ru": "Назад",
+    "en": "Back"
+  },
+  "common.cancel": {
+    "uz": "Bekor qilish",
+    "ru": "Отмена",
+    "en": "Cancel"
+  },
+  "common.close": {
+    "uz": "Yopish",
+    "ru": "Закрыть",
+    "en": "Close"
+  },
+  "common.delete": {
+    "uz": "O‘chirish",
+    "ru": "Удалить",
+    "en": "Delete"
+  },
+  "common.edit": {
+    "uz": "Tahrirlash",
+    "ru": "Редактировать",
+    "en": "Edit"
+  },
+  "common.add": {
+    "uz": "Qo‘shish",
+    "ru": "Добавить",
+    "en": "Add"
+  },
+  "common.continue": {
+    "uz": "Davom etish",
+    "ru": "Продолжить",
+    "en": "Continue"
+  },
+  "common.of": {
+    "uz": "/",
+    "ru": "из",
+    "en": "of"
+  },
+  "common.empty": {
+    "uz": "Hozircha bo‘sh",
+    "ru": "Пока пусто",
+    "en": "Nothing here yet"
+  },
+  "common.sum": {
+    "uz": "so‘m",
+    "ru": "сум",
+    "en": "UZS"
+  },
+  "common.showing": {
+    "uz": "Topildi",
+    "ru": "Найдено",
+    "en": "Found"
+  },
+  "common.books": {
+    "uz": "ta manba",
+    "ru": "материалов",
+    "en": "items"
+  },
+  "home.eyebrow": {
+    "uz": "Movarounnahr ilmiy merosi",
+    "ru": "Научное наследие Мавераннахра",
+    "en": "The scholarly heritage of Transoxiana"
+  },
+  "home.hikmat": {
+    "uz": "Kunning hikmati",
+    "ru": "Мудрость дня",
+    "en": "Wisdom of the day"
+  },
+  "home.sections_title": {
+    "uz": "Asosiy bo‘limlar",
+    "ru": "Основные разделы",
+    "en": "Main sections"
+  },
+  "home.sections_sub": {
+    "uz": "Kutubxona olti yo‘nalishga bo‘lingan — har biri manbalar to‘plami bilan",
+    "ru": "Библиотека разделена на шесть направлений — каждое со своим собранием источников",
+    "en": "The library is organised in six strands, each with its own collection of sources"
+  },
+  "home.new_title": {
+    "uz": "Yangi qo‘shilganlar",
+    "ru": "Новые поступления",
+    "en": "Recently added"
+  },
+  "home.continue_title": {
+    "uz": "O‘qishni davom ettirish",
+    "ru": "Продолжить чтение",
+    "en": "Continue reading"
+  },
+  "home.audio_title": {
+    "uz": "Audiokitoblar",
+    "ru": "Аудиокниги",
+    "en": "Audiobooks"
+  },
+  "home.all_catalog": {
+    "uz": "Butun katalog",
+    "ru": "Весь каталог",
+    "en": "Full catalogue"
+  },
+  "home.stat_books": {
+    "uz": "manba",
+    "ru": "источник",
+    "en": "sources"
+  },
+  "home.stat_audio": {
+    "uz": "audiokitob",
+    "ru": "аудиокнига",
+    "en": "audiobooks"
+  },
+  "home.stat_sections": {
+    "uz": "bo‘lim",
+    "ru": "раздел",
+    "en": "sections"
+  },
+  "home.stat_langs": {
+    "uz": "til",
+    "ru": "язык",
+    "en": "languages"
+  },
+  "catalog.title": {
+    "uz": "Katalog",
+    "ru": "Каталог",
+    "en": "Catalogue"
+  },
+  "catalog.sub": {
+    "uz": "Qidiruv, filtr va saralash — kerakli manbani bir necha soniyada toping",
+    "ru": "Поиск, фильтры и сортировка — найдите нужный источник за секунды",
+    "en": "Search, filter and sort — find the source you need in seconds"
+  },
+  "catalog.filters": {
+    "uz": "Filtrlar",
+    "ru": "Фильтры",
+    "en": "Filters"
+  },
+  "catalog.sort": {
+    "uz": "Saralash",
+    "ru": "Сортировка",
+    "en": "Sort"
+  },
+  "catalog.sort_new": {
+    "uz": "Avval yangilari",
+    "ru": "Сначала новые",
+    "en": "Newest first"
+  },
+  "catalog.sort_popular": {
+    "uz": "Mashhurligi bo‘yicha",
+    "ru": "По популярности",
+    "en": "Most popular"
+  },
+  "catalog.sort_az": {
+    "uz": "Alifbo bo‘yicha (A–Z)",
+    "ru": "По алфавиту (А–Я)",
+    "en": "Alphabetical (A–Z)"
+  },
+  "catalog.access": {
+    "uz": "Kirish",
+    "ru": "Доступ",
+    "en": "Access"
+  },
+  "catalog.has_audio": {
+    "uz": "Audio bor",
+    "ru": "Есть аудио",
+    "en": "Has audio"
+  },
+  "catalog.reset": {
+    "uz": "Filtrlarni tozalash",
+    "ru": "Сбросить фильтры",
+    "en": "Clear filters"
+  },
+  "catalog.empty": {
+    "uz": "Bu shartlarga mos manba topilmadi. Filtrni kengaytiring yoki boshqa so‘z bilan qidiring.",
+    "ru": "По этим условиям ничего не найдено. Расширьте фильтр или измените запрос.",
+    "en": "Nothing matches these filters. Widen the filter or try another word."
+  },
+  "catalog.view_grid": {
+    "uz": "Kartochka",
+    "ru": "Плитка",
+    "en": "Grid"
+  },
+  "catalog.view_list": {
+    "uz": "Ro‘yxat",
+    "ru": "Список",
+    "en": "List"
+  },
+  "book.about": {
+    "uz": "Kitob haqida",
+    "ru": "О книге",
+    "en": "About this book"
+  },
+  "book.contents": {
+    "uz": "Mundarija",
+    "ru": "Содержание",
+    "en": "Contents"
+  },
+  "book.related": {
+    "uz": "Shu bo‘limdagi boshqa manbalar",
+    "ru": "Другие источники раздела",
+    "en": "More from this section"
+  },
+  "book.start": {
+    "uz": "O‘qishni boshlash",
+    "ru": "Начать чтение",
+    "en": "Start reading"
+  },
+  "book.resume": {
+    "uz": "Davom ettirish",
+    "ru": "Продолжить",
+    "en": "Resume"
+  },
+  "book.progress": {
+    "uz": "O‘qildi",
+    "ru": "Прочитано",
+    "en": "Read"
+  },
+  "book.locked": {
+    "uz": "Bu manba pullik. Sotib olgandan so‘ng to‘liq matn va audio ochiladi.",
+    "ru": "Этот источник платный. После покупки откроется полный текст и аудио.",
+    "en": "This source is paid. Buying it unlocks the full text and audio."
+  },
+  "book.owned": {
+    "uz": "Sizda bor",
+    "ru": "Куплено",
+    "en": "In your library"
+  },
+  "reader.settings": {
+    "uz": "Sozlamalar",
+    "ru": "Настройки",
+    "en": "Settings"
+  },
+  "reader.mode": {
+    "uz": "Ko‘rinish",
+    "ru": "Режим",
+    "en": "View"
+  },
+  "reader.mode_text": {
+    "uz": "Matn",
+    "ru": "Текст",
+    "en": "Text"
+  },
+  "reader.mode_page": {
+    "uz": "Asl sahifa",
+    "ru": "Оригинал",
+    "en": "Original"
+  },
+  "reader.mode_hint": {
+    "uz": "“Matn” rejimida kitob ekran o‘lchamiga moslashadi va istalgan parchani belgilash mumkin.",
+    "ru": "В режиме «Текст» книга подстраивается под размер экрана, и любой фрагмент можно выделить.",
+    "en": "In “Text” mode the book reflows to the screen and any passage can be selected."
+  },
+  "reader.width": {
+    "uz": "Matn kengligi",
+    "ru": "Ширина текста",
+    "en": "Text width"
+  },
+  "reader.spacing": {
+    "uz": "Qatorlar orasi",
+    "ru": "Межстрочный интервал",
+    "en": "Line spacing"
+  },
+  "reader.font": {
+    "uz": "Shrift",
+    "ru": "Шрифт",
+    "en": "Typeface"
+  },
+  "reader.font_serif": {
+    "uz": "Serif",
+    "ru": "С засечками",
+    "en": "Serif"
+  },
+  "reader.font_sans": {
+    "uz": "Sans",
+    "ru": "Без засечек",
+    "en": "Sans"
+  },
+  "reader.converting": {
+    "uz": "Kitob matni ekranga moslashtirilmoqda…",
+    "ru": "Текст книги подстраивается под экран…",
+    "en": "Adapting the book text to your screen…"
+  },
+  "reader.convert_done": {
+    "uz": "Kitob o‘qishga tayyor",
+    "ru": "Книга готова к чтению",
+    "en": "The book is ready to read"
+  },
+  "reader.no_text": {
+    "uz": "Bu faylda matn qatlami yo‘q (skaner nusxasi). Asl sahifa rejimi ochildi.",
+    "ru": "В этом файле нет текстового слоя (скан). Открыт режим оригинальных страниц.",
+    "en": "This file has no text layer (a scan). The original page view has been opened."
+  },
+  "reader.search": {
+    "uz": "Kitob ichidan qidirish",
+    "ru": "Поиск по книге",
+    "en": "Search in book"
+  },
+  "reader.search_none": {
+    "uz": "Topilmadi",
+    "ru": "Ничего не найдено",
+    "en": "No matches"
+  },
+  "reader.search_found": {
+    "uz": "ta mos joy",
+    "ru": "совпадений",
+    "en": "matches"
+  },
+  "reader.theme": {
+    "uz": "Mavzu",
+    "ru": "Тема",
+    "en": "Theme"
+  },
+  "reader.theme_light": {
+    "uz": "Oq",
+    "ru": "Светлая",
+    "en": "Light"
+  },
+  "reader.theme_sepia": {
+    "uz": "Sepiya",
+    "ru": "Сепия",
+    "en": "Sepia"
+  },
+  "reader.theme_gray": {
+    "uz": "Kulrang",
+    "ru": "Серая",
+    "en": "Grey"
+  },
+  "reader.theme_night": {
+    "uz": "Tungi",
+    "ru": "Ночная",
+    "en": "Night"
+  },
+  "reader.theme_system": {
+    "uz": "Sistema",
+    "ru": "Системная",
+    "en": "System"
+  },
+  "reader.zoom": {
+    "uz": "Matn hajmi",
+    "ru": "Размер текста",
+    "en": "Text size"
+  },
+  "reader.flip": {
+    "uz": "Varaqlash animatsiyasi",
+    "ru": "Анимация перелистывания",
+    "en": "Page-turn animation"
+  },
+  "reader.bookmark": {
+    "uz": "Xatcho‘p",
+    "ru": "Закладка",
+    "en": "Bookmark"
+  },
+  "reader.bookmarks": {
+    "uz": "Xatcho‘plar",
+    "ru": "Закладки",
+    "en": "Bookmarks"
+  },
+  "reader.bookmark_add": {
+    "uz": "Xatcho‘p qo‘yildi",
+    "ru": "Закладка поставлена",
+    "en": "Bookmark added"
+  },
+  "reader.bookmark_del": {
+    "uz": "Xatcho‘p olib tashlandi",
+    "ru": "Закладка снята",
+    "en": "Bookmark removed"
+  },
+  "reader.notes": {
+    "uz": "Qaydlar",
+    "ru": "Заметки",
+    "en": "Notes"
+  },
+  "reader.notepad": {
+    "uz": "Bloknot",
+    "ru": "Блокнот",
+    "en": "Notepad"
+  },
+  "reader.note_ph": {
+    "uz": "Shu bet bo‘yicha qaydingizni yozing…",
+    "ru": "Запишите заметку к этой странице…",
+    "en": "Write a note about this page…"
+  },
+  "reader.note_save": {
+    "uz": "Qaydni saqlash",
+    "ru": "Сохранить заметку",
+    "en": "Save note"
+  },
+  "reader.highlights": {
+    "uz": "Marker",
+    "ru": "Маркер",
+    "en": "Highlights"
+  },
+  "reader.progress": {
+    "uz": "Progress",
+    "ru": "Прогресс",
+    "en": "Progress"
+  },
+  "reader.page": {
+    "uz": "Bet",
+    "ru": "Стр.",
+    "en": "Page"
+  },
+  "reader.loading": {
+    "uz": "Kitob yuklanmoqda…",
+    "ru": "Книга загружается…",
+    "en": "Loading the book…"
+  },
+  "reader.error": {
+    "uz": "Kitobni ochib bo‘lmadi. Sahifani yangilang yoki administratorga xabar bering.",
+    "ru": "Не удалось открыть книгу. Обновите страницу или сообщите администратору.",
+    "en": "The book could not be opened. Refresh the page or tell an administrator."
+  },
+  "reader.sel_note": {
+    "uz": "Qayd qilish",
+    "ru": "В заметки",
+    "en": "Add note"
+  },
+  "reader.sel_mark": {
+    "uz": "Marker",
+    "ru": "Маркер",
+    "en": "Highlight"
+  },
+  "reader.hl_pick": {
+    "uz": "Marker rangi",
+    "ru": "Цвет маркера",
+    "en": "Highlight colour"
+  },
+  "reader.hl_gold": {
+    "uz": "Sariq",
+    "ru": "Жёлтый",
+    "en": "Yellow"
+  },
+  "reader.hl_mint": {
+    "uz": "Yashil",
+    "ru": "Зелёный",
+    "en": "Green"
+  },
+  "reader.hl_sky": {
+    "uz": "Ko‘k",
+    "ru": "Голубой",
+    "en": "Blue"
+  },
+  "reader.hl_rose": {
+    "uz": "Pushti",
+    "ru": "Розовый",
+    "en": "Pink"
+  },
+  "reader.sel_copy": {
+    "uz": "Nusxalash",
+    "ru": "Копировать",
+    "en": "Copy"
+  },
+  "reader.sel_share": {
+    "uz": "Ulashish",
+    "ru": "Поделиться",
+    "en": "Share"
+  },
+  "reader.sel_ai": {
+    "uz": "AI’dan so‘rash",
+    "ru": "Спросить AI",
+    "en": "Ask AI"
+  },
+  "reader.copied": {
+    "uz": "Nusxalandi",
+    "ru": "Скопировано",
+    "en": "Copied"
+  },
+  "reader.ai_title": {
+    "uz": "AI yordamchi",
+    "ru": "AI-помощник",
+    "en": "AI assistant"
+  },
+  "reader.ai_ctx": {
+    "uz": "Belgilangan matn",
+    "ru": "Выделенный текст",
+    "en": "Selected text"
+  },
+  "reader.ai_ph": {
+    "uz": "Shu parcha bo‘yicha savolingizni yozing…",
+    "ru": "Задайте вопрос по этому фрагменту…",
+    "en": "Ask a question about this passage…"
+  },
+  "reader.ai_send": {
+    "uz": "So‘rash",
+    "ru": "Спросить",
+    "en": "Ask"
+  },
+  "reader.ai_thinking": {
+    "uz": "AI o‘ylamoqda…",
+    "ru": "AI думает…",
+    "en": "AI is thinking…"
+  },
+  "reader.ai_note": {
+    "uz": "Javob belgilangan parcha asosida tayyorlandi. Muhim masalalarda asl manbaga murojaat qiling.",
+    "ru": "Ответ подготовлен на основе выделенного фрагмента. По важным вопросам обращайтесь к первоисточнику.",
+    "en": "The answer is based on the selected passage. For important matters, consult the original source."
+  },
+  "reader.finish": {
+    "uz": "O‘qib tugatdim",
+    "ru": "Прочитано",
+    "en": "Mark as finished"
+  },
+  "reader.exit": {
+    "uz": "Kutubxonaga qaytish",
+    "ru": "Вернуться в библиотеку",
+    "en": "Back to the library"
+  },
+  "audio.title": {
+    "uz": "Audiokitob",
+    "ru": "Аудиокнига",
+    "en": "Audiobook"
+  },
+  "audio.chapters": {
+    "uz": "Bo‘limlar",
+    "ru": "Главы",
+    "en": "Chapters"
+  },
+  "audio.chapter_n": {
+    "uz": "-bo‘lim",
+    "ru": "Глава",
+    "en": "Chapter"
+  },
+  "audio.speed": {
+    "uz": "Tezlik",
+    "ru": "Скорость",
+    "en": "Speed"
+  },
+  "audio.sleep": {
+    "uz": "Uyqu taymeri",
+    "ru": "Таймер сна",
+    "en": "Sleep timer"
+  },
+  "audio.play": {
+    "uz": "Ijro",
+    "ru": "Играть",
+    "en": "Play"
+  },
+  "audio.pause": {
+    "uz": "To‘xtatish",
+    "ru": "Пауза",
+    "en": "Pause"
+  },
+  "audio.back15": {
+    "uz": "15 soniya orqaga",
+    "ru": "15 секунд назад",
+    "en": "Back 15 seconds"
+  },
+  "audio.fwd15": {
+    "uz": "15 soniya oldinga",
+    "ru": "15 секунд вперёд",
+    "en": "Forward 15 seconds"
+  },
+  "audio.soon": {
+    "uz": "Bu nashrning ovozli yozuvi tayyorlanmoqda. Tayyor bo‘lishi bilan shu sahifada ochiladi.",
+    "ru": "Аудиозапись этого издания готовится. Как только она будет готова, она появится на этой странице.",
+    "en": "The audio recording of this edition is in preparation and will appear on this page once ready."
+  },
+  "shop.title": {
+    "uz": "Do‘kon",
+    "ru": "Магазин",
+    "en": "Store"
+  },
+  "shop.sub": {
+    "uz": "Pullik nashrlar va audiokitoblar. To‘lovdan so‘ng manba shaxsiy kutubxonangizga tushadi.",
+    "ru": "Платные издания и аудиокниги. После оплаты источник попадает в вашу личную библиотеку.",
+    "en": "Paid editions and audiobooks. After payment the source lands in your personal library."
+  },
+  "shop.checkout": {
+    "uz": "Buyurtmani rasmiylashtirish",
+    "ru": "Оформление покупки",
+    "en": "Checkout"
+  },
+  "shop.method": {
+    "uz": "To‘lov usuli",
+    "ru": "Способ оплаты",
+    "en": "Payment method"
+  },
+  "shop.pay": {
+    "uz": "To‘lash",
+    "ru": "Оплатить",
+    "en": "Pay"
+  },
+  "shop.total": {
+    "uz": "Jami",
+    "ru": "Итого",
+    "en": "Total"
+  },
+  "shop.success": {
+    "uz": "To‘lov qabul qilindi. Kitob shaxsiy kutubxonangizga qo‘shildi.",
+    "ru": "Оплата принята. Книга добавлена в вашу личную библиотеку.",
+    "en": "Payment accepted. The book has been added to your library."
+  },
+  "shop.pay_note": {
+    "uz": "To‘lov Payme, Click yoki Uzum orqali amalga oshiriladi. To‘lovdan so‘ng nashr shaxsiy kutubxonangizga qo‘shiladi va barcha qurilmalarda ochiladi.",
+    "ru": "Оплата проходит через Payme, Click или Uzum. После оплаты издание добавляется в вашу личную библиотеку и открывается на всех устройствах.",
+    "en": "Payment is handled through Payme, Click or Uzum. Once paid, the edition is added to your library and opens on every device."
+  },
+  "cab.title": {
+    "uz": "Shaxsiy kabinet",
+    "ru": "Личный кабинет",
+    "en": "My account"
+  },
+  "cab.profile": {
+    "uz": "Profil",
+    "ru": "Профиль",
+    "en": "Profile"
+  },
+  "cab.saved": {
+    "uz": "Saqlanganlar",
+    "ru": "Сохранённые",
+    "en": "Saved"
+  },
+  "cab.reading": {
+    "uz": "O‘qilmoqda",
+    "ru": "Читаю сейчас",
+    "en": "Reading now"
+  },
+  "cab.finished": {
+    "uz": "O‘qib tugatilgan",
+    "ru": "Прочитанные",
+    "en": "Finished"
+  },
+  "cab.purchased": {
+    "uz": "Sotib olingan",
+    "ru": "Купленные",
+    "en": "Purchased"
+  },
+  "cab.payments": {
+    "uz": "To‘lovlar tarixi",
+    "ru": "История платежей",
+    "en": "Payment history"
+  },
+  "cab.contest": {
+    "uz": "Tanlovda ishtirok",
+    "ru": "Участие в конкурсе",
+    "en": "Competitions"
+  },
+  "cab.notes": {
+    "uz": "Qaydlar va xatcho‘plar",
+    "ru": "Заметки и закладки",
+    "en": "Notes & bookmarks"
+  },
+  "cab.name": {
+    "uz": "Ism va familiya",
+    "ru": "Имя и фамилия",
+    "en": "Full name"
+  },
+  "cab.email": {
+    "uz": "Elektron pochta",
+    "ru": "Электронная почта",
+    "en": "Email"
+  },
+  "cab.phone": {
+    "uz": "Telefon",
+    "ru": "Телефон",
+    "en": "Phone"
+  },
+  "cab.save_profile": {
+    "uz": "O‘zgarishlarni saqlash",
+    "ru": "Сохранить изменения",
+    "en": "Save changes"
+  },
+  "cab.profile_saved": {
+    "uz": "Profil yangilandi",
+    "ru": "Профиль обновлён",
+    "en": "Profile updated"
+  },
+  "cab.contest_join": {
+    "uz": "Tanlovga ariza yuborish",
+    "ru": "Подать заявку на конкурс",
+    "en": "Enter the competition"
+  },
+  "cab.contest_joined": {
+    "uz": "Arizangiz qabul qilindi",
+    "ru": "Заявка принята",
+    "en": "Your entry is in"
+  },
+  "cab.contest_desc": {
+    "uz": "“Movarounnahr merosi” ilmiy maqolalar tanlovi — har chorakda o‘tkaziladi.",
+    "ru": "Конкурс научных статей «Наследие Мавераннахра» — проводится каждый квартал.",
+    "en": "“Heritage of Transoxiana” — a quarterly competition for scholarly papers."
+  },
+  "auth.login": {
+    "uz": "Kirish",
+    "ru": "Войти",
+    "en": "Sign in"
+  },
+  "auth.logout": {
+    "uz": "Chiqish",
+    "ru": "Выйти",
+    "en": "Sign out"
+  },
+  "auth.register": {
+    "uz": "Ro‘yxatdan o‘tish",
+    "ru": "Регистрация",
+    "en": "Create account"
+  },
+  "auth.have_account": {
+    "uz": "Hisobingiz bormi?",
+    "ru": "Уже есть аккаунт?",
+    "en": "Already have an account?"
+  },
+  "auth.no_account": {
+    "uz": "Hisobingiz yo‘qmi?",
+    "ru": "Нет аккаунта?",
+    "en": "No account yet?"
+  },
+  "auth.password": {
+    "uz": "Parol",
+    "ru": "Пароль",
+    "en": "Password"
+  },
+  "auth.login_title": {
+    "uz": "Kutubxonaga kirish",
+    "ru": "Вход в библиотеку",
+    "en": "Sign in to the library"
+  },
+  "auth.register_title": {
+    "uz": "Yangi hisob yaratish",
+    "ru": "Создание аккаунта",
+    "en": "Create a new account"
+  },
+  "auth.privacy": {
+    "uz": "Kirish ma’lumotlaringiz faqat kutubxona xizmatlari uchun ishlatiladi.",
+    "ru": "Данные учётной записи используются только для работы библиотеки.",
+    "en": "Your account details are used only to run the library services."
+  },
+  "auth.err_credentials": {
+    "uz": "Pochta yoki parol noto‘g‘ri.",
+    "ru": "Неверная почта или пароль.",
+    "en": "That email or password is not right."
+  },
+  "auth.err_exists": {
+    "uz": "Bu pochta bilan hisob allaqachon mavjud.",
+    "ru": "Аккаунт с такой почтой уже существует.",
+    "en": "An account with this email already exists."
+  },
+  "auth.err_short": {
+    "uz": "Parol kamida 8 belgidan iborat bo‘lsin.",
+    "ru": "Пароль должен быть не короче 8 символов.",
+    "en": "The password needs at least 8 characters."
+  },
+  "auth.need_login": {
+    "uz": "Bu bo‘lim uchun avval hisobingizga kiring.",
+    "ru": "Для этого раздела сначала войдите в аккаунт.",
+    "en": "Sign in first to open this section."
+  },
+  "auth.welcome_title": {
+    "uz": "Xush kelibsiz",
+    "ru": "С возвращением",
+    "en": "Welcome back"
+  },
+  "auth.welcome_em": {
+    "uz": "yana.",
+    "ru": "снова.",
+    "en": "again."
+  },
+  "auth.welcome_sub": {
+    "uz": "Saqlangan kitoblaringiz, qaydlar va xatcho‘plar — hammasi o‘zingiz qoldirgan joyda turibdi.",
+    "ru": "Сохранённые книги, заметки и закладки — всё осталось там, где вы их оставили.",
+    "en": "Your saved books, notes and bookmarks are exactly where you left them."
+  },
+  "auth.start_title": {
+    "uz": "Birinchi sahifani",
+    "ru": "Откройте первую",
+    "en": "Open the first"
+  },
+  "auth.start_em": {
+    "uz": "oching.",
+    "ru": "страницу.",
+    "en": "page."
+  },
+  "auth.start_sub": {
+    "uz": "Bitta hisob — barcha kitoblar, audio va qaydlar uchun, istalgan qurilmada.",
+    "ru": "Один аккаунт — для всех книг, аудио и заметок, на любом устройстве.",
+    "en": "One account for every book, every recording and every note, on any device."
+  },
+  "auth.keep": {
+    "uz": "Meni eslab qol",
+    "ru": "Запомнить меня",
+    "en": "Keep me signed in"
+  },
+  "auth.forgot": {
+    "uz": "Parolni unutdingizmi?",
+    "ru": "Забыли пароль?",
+    "en": "Forgot password?"
+  },
+  "auth.pw_hint": {
+    "uz": "Kamida 8 ta belgi",
+    "ru": "Не менее 8 символов",
+    "en": "Use 8 characters or more"
+  },
+  "auth.to_register": {
+    "uz": "Bu yerda yangimisiz?",
+    "ru": "Впервые здесь?",
+    "en": "New here?"
+  },
+  "auth.to_login": {
+    "uz": "Hisobingiz bormi?",
+    "ru": "Уже есть аккаунт?",
+    "en": "Already have an account?"
+  },
+  "auth.back_home": {
+    "uz": "Bosh sahifaga",
+    "ru": "На главную",
+    "en": "Back home"
+  },
+  "auth.show_pw": {
+    "uz": "Parolni ko‘rsatish",
+    "ru": "Показать пароль",
+    "en": "Show password"
+  },
+  "auth.err_email": {
+    "uz": "To‘g‘ri elektron pochta manzilini kiriting.",
+    "ru": "Введите корректный адрес электронной почты.",
+    "en": "Enter a valid email address."
+  },
+  "auth.first_name": {
+    "uz": "Ism",
+    "ru": "Имя",
+    "en": "First name"
+  },
+  "auth.last_name": {
+    "uz": "Familiya",
+    "ru": "Фамилия",
+    "en": "Last name"
+  },
+  "auth.phone": {
+    "uz": "Telefon raqami",
+    "ru": "Номер телефона",
+    "en": "Phone number"
+  },
+  "auth.err_phone": {
+    "uz": "Telefon raqamini to‘liq kiriting, masalan +998 90 123 45 67.",
+    "ru": "Укажите номер телефона полностью, например +998 90 123 45 67.",
+    "en": "Enter the full phone number, for example +998 90 123 45 67."
+  },
+  "verify.title": {
+    "uz": "Pochtangizni tasdiqlang",
+    "ru": "Подтвердите почту",
+    "en": "Verify your email"
+  },
+  "verify.sub": {
+    "uz": "Yuborilgan 4 xonali kodni kiriting:",
+    "ru": "Введите 4-значный код, отправленный на адрес",
+    "en": "Enter the 4-digit code we sent to"
+  },
+  "verify.hint": {
+    "uz": "Kodni yozing yoki xabardan nusxalab qo‘ying.",
+    "ru": "Введите код или вставьте его из сообщения.",
+    "en": "Type the code or paste it from the message."
+  },
+  "verify.check": {
+    "uz": "Tasdiqlash",
+    "ru": "Подтвердить",
+    "en": "Verify"
+  },
+  "verify.no_code": {
+    "uz": "Kod kelmadimi?",
+    "ru": "Не пришёл код?",
+    "en": "Didn’t get the code?"
+  },
+  "verify.resend": {
+    "uz": "Qayta yuborish",
+    "ru": "Отправить снова",
+    "en": "Resend"
+  },
+  "verify.resend_in": {
+    "uz": "Qayta yuborish —",
+    "ru": "Отправить снова через",
+    "en": "Resend in"
+  },
+  "verify.sent_again": {
+    "uz": "Yangi kod yuborildi",
+    "ru": "Новый код отправлен",
+    "en": "A new code has been sent"
+  },
+  "verify.wrong": {
+    "uz": "Kod noto‘g‘ri. Qaytadan urinib ko‘ring.",
+    "ru": "Неверный код. Попробуйте ещё раз.",
+    "en": "Wrong code. Try again."
+  },
+  "verify.left": {
+    "uz": "urinish qoldi",
+    "ru": "попыток осталось",
+    "en": "attempts left"
+  },
+  "verify.too_many": {
+    "uz": "Urinishlar tugadi. Davom etish uchun quyidagi tekshiruvni bajaring.",
+    "ru": "Попытки исчерпаны. Чтобы продолжить, пройдите проверку ниже.",
+    "en": "Too many attempts. Complete the check below to continue."
+  },
+  "verify.need_captcha": {
+    "uz": "Avval tekshiruvdan o‘ting.",
+    "ru": "Сначала пройдите проверку.",
+    "en": "Complete the check first."
+  },
+  "verify.captcha_t": {
+    "uz": "Siz robot emasligingizni tasdiqlang",
+    "ru": "Подтвердите, что вы не робот",
+    "en": "Confirm you are not a robot"
+  },
+  "verify.captcha_sub": {
+    "uz": "Raqamlarni kichikdan kattaga qarab bosing.",
+    "ru": "Нажмите цифры по возрастанию — от меньшей к большей.",
+    "en": "Tap the digits in ascending order, from smallest to largest."
+  },
+  "verify.captcha_wrong": {
+    "uz": "Tartib noto‘g‘ri. Yangi raqamlar berildi.",
+    "ru": "Порядок неверный. Выданы новые цифры.",
+    "en": "Wrong order. New digits have been issued."
+  },
+  "verify.captcha_ok": {
+    "uz": "Tekshiruvdan o‘tdingiz",
+    "ru": "Проверка пройдена",
+    "en": "Check passed"
+  },
+  "verify.success": {
+    "uz": "Pochta tasdiqlandi",
+    "ru": "Почта подтверждена",
+    "en": "Email verified"
+  },
+  "verify.success_sub": {
+    "uz": "Hisobingiz yaratildi — kutubxonaga xush kelibsiz.",
+    "ru": "Аккаунт создан — добро пожаловать в библиотеку.",
+    "en": "Your account has been created — welcome to the library."
+  },
+  "verify.continue": {
+    "uz": "Davom etish",
+    "ru": "Продолжить",
+    "en": "Continue"
+  },
+  "verify.expired": {
+    "uz": "Ariza muddati tugadi. Ro‘yxatdan o‘tishni qaytadan boshlang.",
+    "ru": "Срок заявки истёк. Начните регистрацию заново.",
+    "en": "The request has expired. Please start signing up again."
+  },
+  "verify.wait": {
+    "uz": "Biroz kuting",
+    "ru": "Немного подождите",
+    "en": "Please wait"
+  },
+  "verify.preview": {
+    "uz": "Pochta serveri hali ulanmagan, shuning uchun kod shu yerda ko‘rsatilmoqda.",
+    "ru": "Почтовый сервер ещё не подключён, поэтому код показан здесь.",
+    "en": "The mail server is not connected yet, so the code is shown here."
+  },
+  "verify.fill": {
+    "uz": "Qo‘yish",
+    "ru": "Вставить",
+    "en": "Fill"
+  },
+  "verify.back": {
+    "uz": "Ma’lumotlarni o‘zgartirish",
+    "ru": "Изменить данные",
+    "en": "Change details"
+  },
+  "auth.err_name": {
+    "uz": "Ismingizni kiriting.",
+    "ru": "Укажите имя.",
+    "en": "Enter your name."
+  },
+  "admin.title": {
+    "uz": "Admin panel",
+    "ru": "Админ-панель",
+    "en": "Admin panel"
+  },
+  "admin.login_title": {
+    "uz": "Boshqaruv paneliga kirish",
+    "ru": "Вход в панель управления",
+    "en": "Sign in to the admin panel"
+  },
+  "admin.dashboard": {
+    "uz": "Boshqaruv paneli",
+    "ru": "Дашборд",
+    "en": "Dashboard"
+  },
+  "admin.books": {
+    "uz": "Kitoblar",
+    "ru": "Книги",
+    "en": "Books"
+  },
+  "admin.authors": {
+    "uz": "Mualliflar",
+    "ru": "Авторы",
+    "en": "Authors"
+  },
+  "admin.categories": {
+    "uz": "Kategoriyalar",
+    "ru": "Категории",
+    "en": "Categories"
+  },
+  "admin.users": {
+    "uz": "Foydalanuvchilar",
+    "ru": "Пользователи",
+    "en": "Users"
+  },
+  "admin.sales": {
+    "uz": "Sotuvlar",
+    "ru": "Продажи",
+    "en": "Sales"
+  },
+  "admin.audit": {
+    "uz": "Audit log",
+    "ru": "Журнал действий",
+    "en": "Audit log"
+  },
+  "admin.add_book": {
+    "uz": "Kitob qo‘shish",
+    "ru": "Добавить книгу",
+    "en": "Add a book"
+  },
+  "admin.title_field": {
+    "uz": "Nomi",
+    "ru": "Название",
+    "en": "Title"
+  },
+  "admin.file_book": {
+    "uz": "Kitob fayli (PDF)",
+    "ru": "Файл книги (PDF)",
+    "en": "Book file (PDF)"
+  },
+  "admin.file_cover": {
+    "uz": "Muqova (PNG/JPG)",
+    "ru": "Обложка (PNG/JPG)",
+    "en": "Cover (PNG/JPG)"
+  },
+  "admin.price": {
+    "uz": "Narx (0 = bepul)",
+    "ru": "Цена (0 = бесплатно)",
+    "en": "Price (0 = free)"
+  },
+  "admin.confirm_del": {
+    "uz": "Kitob va uning fayllari o‘chiriladi. Davom etamizmi?",
+    "ru": "Книга и её файлы будут удалены. Продолжить?",
+    "en": "The book and its files will be deleted. Continue?"
+  },
+  "admin.stat_books": {
+    "uz": "Manbalar",
+    "ru": "Источников",
+    "en": "Sources"
+  },
+  "admin.stat_users": {
+    "uz": "Foydalanuvchilar",
+    "ru": "Пользователей",
+    "en": "Users"
+  },
+  "admin.stat_sales": {
+    "uz": "Sotuvlar",
+    "ru": "Продаж",
+    "en": "Sales"
+  },
+  "admin.stat_revenue": {
+    "uz": "Tushum",
+    "ru": "Выручка",
+    "en": "Revenue"
+  },
+  "admin.top_books": {
+    "uz": "Eng ko‘p o‘qilganlar",
+    "ru": "Самые читаемые",
+    "en": "Most read"
+  },
+  "admin.recent_sales": {
+    "uz": "So‘nggi sotuvlar",
+    "ru": "Последние продажи",
+    "en": "Recent sales"
+  },
+  "admin.reads_month": {
+    "uz": "Oylik o‘qishlar",
+    "ru": "Чтений по месяцам",
+    "en": "Reads by month"
+  },
+  "admin.book_count": {
+    "uz": "Kitoblari",
+    "ru": "Книг",
+    "en": "Books"
+  },
+  "admin.role": {
+    "uz": "Rol",
+    "ru": "Роль",
+    "en": "Role"
+  },
+  "admin.joined": {
+    "uz": "Ro‘yxatdan o‘tgan",
+    "ru": "Зарегистрирован",
+    "en": "Joined"
+  },
+  "admin.actor": {
+    "uz": "Kim",
+    "ru": "Кто",
+    "en": "Who"
+  },
+  "admin.action": {
+    "uz": "Amal",
+    "ru": "Действие",
+    "en": "Action"
+  },
+  "admin.when": {
+    "uz": "Qachon",
+    "ru": "Когда",
+    "en": "When"
+  },
+  "admin.file_audio": {
+    "uz": "Audio fayl (MP3/M4A)",
+    "ru": "Аудиофайл (MP3/M4A)",
+    "en": "Audio file (MP3/M4A)"
+  },
+  "admin.audio": {
+    "uz": "Audio",
+    "ru": "Аудио",
+    "en": "Audio"
+  },
+  "admin.audio_add": {
+    "uz": "Audio yuklash",
+    "ru": "Загрузить аудио",
+    "en": "Upload audio"
+  },
+  "admin.audio_replace": {
+    "uz": "Audioni almashtirish",
+    "ru": "Заменить аудио",
+    "en": "Replace audio"
+  },
+  "admin.audio_del": {
+    "uz": "Audioni o‘chirish",
+    "ru": "Удалить аудио",
+    "en": "Remove audio"
+  },
+  "admin.audio_hint": {
+    "uz": "Fayl tanlanganda davomiylik avtomatik aniqlanadi va kitob kartochkasiga yoziladi.",
+    "ru": "При выборе файла длительность определяется автоматически и записывается в карточку книги.",
+    "en": "When a file is chosen, its duration is detected automatically and saved with the book."
+  },
+  "admin.audio_saved": {
+    "uz": "Audio saqlandi",
+    "ru": "Аудио сохранено",
+    "en": "Audio saved"
+  },
+  "team.title": {
+    "uz": "Markaz jamoasi",
+    "ru": "Команда центра",
+    "en": "The centre’s team"
+  },
+  "team.sub": {
+    "uz": "Ilmiy va tashkiliy ishlarni olib boradigan mutaxassislar.",
+    "ru": "Специалисты, которые ведут научную и организационную работу.",
+    "en": "The specialists who carry out the research and organisational work."
+  },
+  "team.empty": {
+    "uz": "Jamoa ro‘yxati hali to‘ldirilmagan.",
+    "ru": "Список команды пока не заполнен.",
+    "en": "The team list has not been filled in yet."
+  },
+  "admin.team": {
+    "uz": "Jamoa",
+    "ru": "Команда",
+    "en": "Team"
+  },
+  "admin.team_add": {
+    "uz": "A‘zo qo‘shish",
+    "ru": "Добавить сотрудника",
+    "en": "Add a member"
+  },
+  "admin.team_name": {
+    "uz": "Ism-familiya",
+    "ru": "Имя и фамилия",
+    "en": "Full name"
+  },
+  "admin.team_role": {
+    "uz": "Lavozim",
+    "ru": "Должность",
+    "en": "Position"
+  },
+  "admin.team_bio": {
+    "uz": "Qisqacha ma’lumot",
+    "ru": "Краткое описание",
+    "en": "Short description"
+  },
+  "admin.team_photo": {
+    "uz": "Surat (JPG/PNG)",
+    "ru": "Фото (JPG/PNG)",
+    "en": "Photo (JPG/PNG)"
+  },
+  "admin.team_order": {
+    "uz": "Tartib raqami",
+    "ru": "Порядок",
+    "en": "Sort order"
+  },
+  "admin.team_hint": {
+    "uz": "Tartib raqami kichik bo‘lgan a‘zo “Markaz haqida” sahifasida yuqorida turadi.",
+    "ru": "Сотрудник с меньшим порядковым номером показывается на странице «О центре» выше.",
+    "en": "A member with a lower sort order appears higher on the “About” page."
+  },
+  "admin.filter": {
+    "uz": "Ro‘yxatdan qidirish",
+    "ru": "Поиск по списку",
+    "en": "Filter the list"
+  },
+  "admin.nothing": {
+    "uz": "Mos yozuv topilmadi",
+    "ru": "Ничего не найдено",
+    "en": "Nothing found"
+  },
+  "admin.hikmat": {
+    "uz": "Hikmatlar",
+    "ru": "Мудрости",
+    "en": "Wisdom quotes"
+  },
+  "admin.hikmat_add": {
+    "uz": "Yangi hikmat qo‘shish",
+    "ru": "Добавить мудрость",
+    "en": "Add a quote"
+  },
+  "admin.hikmat_text": {
+    "uz": "Matn",
+    "ru": "Текст",
+    "en": "Text"
+  },
+  "admin.hikmat_src": {
+    "uz": "Manba",
+    "ru": "Источник",
+    "en": "Source"
+  },
+  "admin.hikmat_hint": {
+    "uz": "Bosh sahifadagi “Kunning hikmati” blokida har kuni uchta yozuv aylanadi.",
+    "ru": "В блоке «Мудрость дня» на главной по очереди показываются три записи в день.",
+    "en": "The “Wisdom of the day” block on the home page cycles three entries a day."
+  },
+  "admin.saved": {
+    "uz": "Saqlandi",
+    "ru": "Сохранено",
+    "en": "Saved"
+  },
+  "admin.questions": {
+    "uz": "Murojaatlar",
+    "ru": "Обращения",
+    "en": "Enquiries"
+  },
+  "admin.q_new": {
+    "uz": "Yangi",
+    "ru": "Новые",
+    "en": "New"
+  },
+  "admin.q_answered": {
+    "uz": "Javob berilgan",
+    "ru": "Отвечено",
+    "en": "Answered"
+  },
+  "admin.q_answer": {
+    "uz": "Javob yozish",
+    "ru": "Написать ответ",
+    "en": "Write an answer"
+  },
+  "admin.q_send": {
+    "uz": "Javobni yuborish",
+    "ru": "Отправить ответ",
+    "en": "Send answer"
+  },
+  "admin.q_empty": {
+    "uz": "Hozircha murojaat yo‘q.",
+    "ru": "Обращений пока нет.",
+    "en": "No enquiries yet."
+  },
+  "admin.err_password": {
+    "uz": "Parol noto‘g‘ri",
+    "ru": "Неверный пароль",
+    "en": "Wrong password"
+  },
+  "admin.back_site": {
+    "uz": "Saytga qaytish",
+    "ru": "Вернуться на сайт",
+    "en": "Back to the site"
+  },
+  "consult.title": {
+    "uz": "Mutaxassisga murojaat",
+    "ru": "Обращение к специалисту",
+    "en": "Ask a specialist"
+  },
+  "consult.sub": {
+    "uz": "Aqida, manbashunoslik va qo‘lyozmalar bo‘yicha savolingizni yozing — markaz mutaxassislari manbalarga tayangan holda javob beradi.",
+    "ru": "Задайте вопрос по вероучению, источниковедению или рукописям — специалисты центра ответят со ссылкой на источники.",
+    "en": "Send a question on doctrine, source studies or manuscripts — the centre’s specialists answer with references to the sources."
+  },
+  "consult.how_t": {
+    "uz": "Qanday ishlaydi",
+    "ru": "Как это работает",
+    "en": "How it works"
+  },
+  "consult.how_1": {
+    "uz": "Savolingizni yo‘nalishni tanlab yuborasiz.",
+    "ru": "Вы отправляете вопрос, выбрав направление.",
+    "en": "You send your question and choose a subject area."
+  },
+  "consult.how_2": {
+    "uz": "Murojaat tegishli bo‘lim mutaxassisiga yo‘naltiriladi.",
+    "ru": "Обращение направляется специалисту соответствующего отдела.",
+    "en": "The enquiry is routed to a specialist in the relevant department."
+  },
+  "consult.how_3": {
+    "uz": "Javob shu sahifada va pochtangizga keladi — odatda 3 ish kuni ichida.",
+    "ru": "Ответ появляется на этой странице и приходит на почту — обычно в течение 3 рабочих дней.",
+    "en": "The answer appears on this page and arrives by email, usually within three working days."
+  },
+  "consult.form_t": {
+    "uz": "Savol yuborish",
+    "ru": "Отправить вопрос",
+    "en": "Send a question"
+  },
+  "consult.name": {
+    "uz": "Ismingiz",
+    "ru": "Ваше имя",
+    "en": "Your name"
+  },
+  "consult.topic": {
+    "uz": "Yo‘nalish",
+    "ru": "Направление",
+    "en": "Subject area"
+  },
+  "consult.text": {
+    "uz": "Savolingiz",
+    "ru": "Ваш вопрос",
+    "en": "Your question"
+  },
+  "consult.text_ph": {
+    "uz": "Savolingizni aniq va qisqa yozing. Agar manba yoki kitobga tegishli bo‘lsa — nomini ko‘rsating.",
+    "ru": "Сформулируйте вопрос коротко и точно. Если он касается книги или источника — укажите название.",
+    "en": "State your question briefly and precisely. If it concerns a book or a source, give its title."
+  },
+  "consult.send": {
+    "uz": "Yuborish",
+    "ru": "Отправить",
+    "en": "Send"
+  },
+  "consult.sent": {
+    "uz": "Murojaatingiz qabul qilindi. Javob tayyor bo‘lgach shu sahifada ko‘rinadi.",
+    "ru": "Обращение принято. Как только ответ будет готов, он появится на этой странице.",
+    "en": "Your enquiry has been received. The answer will appear on this page once it is ready."
+  },
+  "consult.mine": {
+    "uz": "Mening murojaatlarim",
+    "ru": "Мои обращения",
+    "en": "My enquiries"
+  },
+  "consult.mine_empty": {
+    "uz": "Siz hali savol yubormagansiz.",
+    "ru": "Вы ещё не отправляли вопросов.",
+    "en": "You have not sent a question yet."
+  },
+  "consult.status_new": {
+    "uz": "Ko‘rib chiqilmoqda",
+    "ru": "На рассмотрении",
+    "en": "In review"
+  },
+  "consult.status_answered": {
+    "uz": "Javob berildi",
+    "ru": "Отвечено",
+    "en": "Answered"
+  },
+  "consult.answer": {
+    "uz": "Mutaxassis javobi",
+    "ru": "Ответ специалиста",
+    "en": "Specialist’s answer"
+  },
+  "consult.err_text": {
+    "uz": "Savol matni kamida 20 belgidan iborat bo‘lsin.",
+    "ru": "Текст вопроса должен содержать не менее 20 символов.",
+    "en": "The question needs at least 20 characters."
+  },
+  "consult.err_email": {
+    "uz": "Javob yuborishimiz uchun to‘g‘ri pochta manzilini kiriting.",
+    "ru": "Укажите корректный адрес почты, чтобы мы могли отправить ответ.",
+    "en": "Enter a valid email address so we can send the answer."
+  },
+  "consult.recent_t": {
+    "uz": "Ochiq javoblardan",
+    "ru": "Из опубликованных ответов",
+    "en": "From published answers"
+  },
+  "consult.recent_sub": {
+    "uz": "Boshqa o‘quvchilarning savollariga berilgan javoblar.",
+    "ru": "Ответы на вопросы других читателей.",
+    "en": "Answers to questions from other readers."
+  },
+  "topic.aqida": {
+    "uz": "Aqida va kalom",
+    "ru": "Вероучение и калам",
+    "en": "Doctrine & kalam"
+  },
+  "topic.manba": {
+    "uz": "Manbashunoslik",
+    "ru": "Источниковедение",
+    "en": "Source studies"
+  },
+  "topic.qolyozma": {
+    "uz": "Qo‘lyozmalar",
+    "ru": "Рукописи",
+    "en": "Manuscripts"
+  },
+  "topic.talim": {
+    "uz": "Ta’lim va stipendiya",
+    "ru": "Обучение и стипендия",
+    "en": "Study & scholarship"
+  },
+  "topic.kutubxona": {
+    "uz": "Kutubxona ishi",
+    "ru": "Работа библиотеки",
+    "en": "Library services"
+  },
+  "topic.boshqa": {
+    "uz": "Boshqa savol",
+    "ru": "Другой вопрос",
+    "en": "Other"
+  },
+  "quiz.title": {
+    "uz": "Viktorina",
+    "ru": "Викторина",
+    "en": "Quiz"
+  },
+  "quiz.cta": {
+    "uz": "Viktorinani boshlash",
+    "ru": "Пройти викторину",
+    "en": "Take the quiz"
+  },
+  "quiz.sub": {
+    "uz": "Har bir savolda bitta to‘g‘ri javob bor. To‘g‘ri javob —",
+    "ru": "В каждом вопросе один верный ответ. За верный ответ —",
+    "en": "Each question has one correct answer. A correct answer is worth"
+  },
+  "quiz.points": {
+    "uz": "ball",
+    "ru": "балла",
+    "en": "points"
+  },
+  "quiz.q": {
+    "uz": "Savol",
+    "ru": "Вопрос",
+    "en": "Question"
+  },
+  "quiz.of": {
+    "uz": "dan",
+    "ru": "из",
+    "en": "of"
+  },
+  "quiz.next": {
+    "uz": "Keyingi",
+    "ru": "Далее",
+    "en": "Next"
+  },
+  "quiz.prev": {
+    "uz": "Oldingi",
+    "ru": "Назад",
+    "en": "Back"
+  },
+  "quiz.finish": {
+    "uz": "Yakunlash",
+    "ru": "Завершить",
+    "en": "Finish"
+  },
+  "quiz.unanswered": {
+    "uz": "Barcha savollarga javob bering.",
+    "ru": "Ответьте на все вопросы.",
+    "en": "Answer every question."
+  },
+  "quiz.result": {
+    "uz": "Natija",
+    "ru": "Результат",
+    "en": "Result"
+  },
+  "quiz.correct": {
+    "uz": "to‘g‘ri javob",
+    "ru": "верных ответов",
+    "en": "correct answers"
+  },
+  "quiz.best": {
+    "uz": "Eng yaxshi natijangiz",
+    "ru": "Ваш лучший результат",
+    "en": "Your best result"
+  },
+  "quiz.board": {
+    "uz": "Shu kitob bo‘yicha reyting",
+    "ru": "Рейтинг по этой книге",
+    "en": "Leaderboard for this book"
+  },
+  "quiz.overall": {
+    "uz": "Umumiy reyting",
+    "ru": "Общий рейтинг",
+    "en": "Overall leaderboard"
+  },
+  "quiz.reader": {
+    "uz": "O‘quvchi",
+    "ru": "Читатель",
+    "en": "Reader"
+  },
+  "quiz.score": {
+    "uz": "Ball",
+    "ru": "Баллы",
+    "en": "Score"
+  },
+  "quiz.books": {
+    "uz": "Kitoblar",
+    "ru": "Книг",
+    "en": "Books"
+  },
+  "quiz.you": {
+    "uz": "Siz",
+    "ru": "Вы",
+    "en": "You"
+  },
+  "quiz.locked": {
+    "uz": "Viktorina kitobni o‘qib tugatgandan so‘ng ochiladi.",
+    "ru": "Викторина открывается после прочтения книги.",
+    "en": "The quiz unlocks once you finish the book."
+  },
+  "quiz.empty": {
+    "uz": "Bu kitob uchun savollar hali tayyorlanmagan.",
+    "ru": "Вопросы для этой книги ещё не подготовлены.",
+    "en": "Questions for this book are not ready yet."
+  },
+  "cert.title": {
+    "uz": "Sertifikat",
+    "ru": "Сертификат",
+    "en": "Certificate"
+  },
+  "cert.get": {
+    "uz": "Sertifikatni yuklab olish",
+    "ru": "Скачать сертификат",
+    "en": "Download certificate"
+  },
+  "cert.awarded": {
+    "uz": "Ushbu sertifikat quyidagi shaxsga taqdim etiladi",
+    "ru": "Настоящий сертификат вручается",
+    "en": "This certificate is awarded to"
+  },
+  "cert.for": {
+    "uz": "kitobni o‘qib chiqqani va viktorinani muvaffaqiyatli yakunlagani uchun",
+    "ru": "за прочтение книги и успешное прохождение викторины",
+    "en": "for reading the book and completing its quiz"
+  },
+  "cert.correct": {
+    "uz": "To‘g‘ri javoblar",
+    "ru": "Верных ответов",
+    "en": "Correct answers"
+  },
+  "cert.date": {
+    "uz": "Sana",
+    "ru": "Дата",
+    "en": "Date"
+  },
+  "cert.number": {
+    "uz": "Sertifikat raqami",
+    "ru": "Номер сертификата",
+    "en": "Certificate no."
+  },
+  "cert.loading": {
+    "uz": "Yuklanmoqda",
+    "ru": "Загружается",
+    "en": "Downloading"
+  },
+  "cert.ready": {
+    "uz": "Tayyor",
+    "ru": "Готово",
+    "en": "Done"
+  },
+  "quiz.once": {
+    "uz": "Viktorina bir marta yechiladi — natijangiz reytingda saqlanadi.",
+    "ru": "Викторина проходится один раз — результат сохраняется в рейтинге.",
+    "en": "The quiz can be taken once — your result is kept in the leaderboard."
+  },
+  "quiz.done_already": {
+    "uz": "Siz bu viktorinani yakunlagansiz.",
+    "ru": "Вы уже прошли эту викторину.",
+    "en": "You have already completed this quiz."
+  },
+  "cert.hint": {
+    "uz": "Sertifikat PDF ko‘rinishida yuklanadi — uni saqlash yoki yuborish mumkin.",
+    "ru": "Сертификат скачивается в PDF — его можно сохранить или переслать.",
+    "en": "The certificate downloads as a PDF you can save or forward."
+  },
+  "stats.title": {
+    "uz": "O‘qish statistikasi",
+    "ru": "Статистика чтения",
+    "en": "Reading stats"
+  },
+  "stats.tab": {
+    "uz": "Statistika",
+    "ru": "Статистика",
+    "en": "Stats"
+  },
+  "stats.sub": {
+    "uz": "Ko‘rsatkichlar shu qurilmadagi o‘qish tarixidan yig‘iladi.",
+    "ru": "Показатели собираются из истории чтения на этом устройстве.",
+    "en": "The figures are gathered from your reading history on this device."
+  },
+  "stats.finished": {
+    "uz": "Tugatilgan kitoblar",
+    "ru": "Книг прочитано",
+    "en": "Books finished"
+  },
+  "stats.month": {
+    "uz": "Shu oyda betlar",
+    "ru": "Страниц за месяц",
+    "en": "Pages this month"
+  },
+  "stats.streak": {
+    "uz": "Ketma-ket kunlar",
+    "ru": "Дней подряд",
+    "en": "Day streak"
+  },
+  "stats.total": {
+    "uz": "Jami betlar",
+    "ru": "Всего страниц",
+    "en": "Pages in total"
+  },
+  "stats.today": {
+    "uz": "Bugun",
+    "ru": "Сегодня",
+    "en": "Today"
+  },
+  "stats.best": {
+    "uz": "Eng samarali kun",
+    "ru": "Лучший день",
+    "en": "Best day"
+  },
+  "stats.days": {
+    "uz": "kun",
+    "ru": "дн.",
+    "en": "days"
+  },
+  "stats.pages": {
+    "uz": "bet",
+    "ru": "стр.",
+    "en": "pages"
+  },
+  "stats.month30": {
+    "uz": "So‘nggi 30 kun",
+    "ru": "Последние 30 дней",
+    "en": "Last 30 days"
+  },
+  "stats.weekdays": {
+    "uz": "Hafta kunlari bo‘yicha",
+    "ru": "По дням недели",
+    "en": "By weekday"
+  },
+  "stats.empty": {
+    "uz": "Hali o‘qish tarixi yo‘q — birinchi kitobni oching, ko‘rsatkichlar shu yerda paydo bo‘ladi.",
+    "ru": "Истории чтения пока нет — откройте первую книгу, и показатели появятся здесь.",
+    "en": "No reading history yet — open your first book and the figures will appear here."
+  },
+  "theme.switch": {
+    "uz": "Mavzuni almashtirish",
+    "ru": "Сменить тему",
+    "en": "Switch theme"
+  },
+  "theme.light": {
+    "uz": "Yorug‘",
+    "ru": "Светлая",
+    "en": "Light"
+  },
+  "theme.dark": {
+    "uz": "Tungi",
+    "ru": "Тёмная",
+    "en": "Dark"
+  },
+  "theme.auto": {
+    "uz": "Tizim bo‘yicha",
+    "ru": "Как в системе",
+    "en": "System"
+  },
+  "nav.rating": {
+    "uz": "Reyting",
+    "ru": "Рейтинг",
+    "en": "Leaderboard"
+  },
+  "rating.title": {
+    "uz": "O‘quvchilar reytingi",
+    "ru": "Рейтинг читателей",
+    "en": "Readers’ leaderboard"
+  },
+  "rating.sub": {
+    "uz": "Kitobni o‘qib, viktorinani yechganlar. Har bir to‘g‘ri javob 4 ball beradi.",
+    "ru": "Те, кто прочитал книгу и прошёл викторину. Каждый верный ответ — 4 балла.",
+    "en": "Everyone who finished a book and passed its quiz. Each correct answer earns 4 points."
+  },
+  "rating.empty": {
+    "uz": "Reyting hali bo‘sh — birinchi bo‘ling.",
+    "ru": "Рейтинг пока пуст — будьте первым.",
+    "en": "The leaderboard is empty — be the first."
+  },
+  "rating.recent": {
+    "uz": "So‘nggi natijalar",
+    "ru": "Последние результаты",
+    "en": "Recent results"
+  },
+  "admin.quiz": {
+    "uz": "Viktorina",
+    "ru": "Викторина",
+    "en": "Quiz"
+  },
+  "admin.quiz_book": {
+    "uz": "Kitobni tanlang",
+    "ru": "Выберите книгу",
+    "en": "Choose a book"
+  },
+  "admin.quiz_add": {
+    "uz": "Savol qo‘shish",
+    "ru": "Добавить вопрос",
+    "en": "Add a question"
+  },
+  "admin.quiz_q": {
+    "uz": "Savol matni",
+    "ru": "Текст вопроса",
+    "en": "Question"
+  },
+  "admin.quiz_opt": {
+    "uz": "Variant",
+    "ru": "Вариант",
+    "en": "Option"
+  },
+  "admin.quiz_correct": {
+    "uz": "To‘g‘ri variant",
+    "ru": "Верный вариант",
+    "en": "Correct option"
+  },
+  "admin.quiz_bulk": {
+    "uz": "Ko‘p savolni birdan yuklash",
+    "ru": "Массовая загрузка вопросов",
+    "en": "Bulk upload"
+  },
+  "admin.quiz_bulk_hint": {
+    "uz": "Har bir qator: savol | 1-variant | 2-variant | 3-variant | 4-variant | to‘g‘risining raqami (1–4)",
+    "ru": "Каждая строка: вопрос | вариант 1 | вариант 2 | вариант 3 | вариант 4 | номер верного (1–4)",
+    "en": "One per line: question | option 1 | option 2 | option 3 | option 4 | number of the correct one (1–4)"
+  },
+  "admin.quiz_count": {
+    "uz": "Savollar soni",
+    "ru": "Вопросов",
+    "en": "Questions"
+  },
+  "admin.quiz_need": {
+    "uz": "To‘liq viktorina uchun 25 ta savol kerak (25 × 4 = 100 ball).",
+    "ru": "Для полной викторины нужно 25 вопросов (25 × 4 = 100 баллов).",
+    "en": "A full quiz needs 25 questions (25 × 4 = 100 points)."
+  },
+  "admin.results": {
+    "uz": "Natijalar",
+    "ru": "Результаты",
+    "en": "Results"
+  },
+  "err.404_title": {
+    "uz": "Sahifa topilmadi",
+    "ru": "Страница не найдена",
+    "en": "Page not found"
+  },
+  "err.404_text": {
+    "uz": "Manzil o‘zgargan yoki manba o‘chirilgan bo‘lishi mumkin.",
+    "ru": "Адрес мог измениться, или источник был удалён.",
+    "en": "The address may have changed, or the source was removed."
+  },
+  "err.home": {
+    "uz": "Bosh sahifaga",
+    "ru": "На главную",
+    "en": "Go home"
+  },
+  "about.title": {
+    "uz": "Markaz haqida",
+    "ru": "О центре",
+    "en": "About the centre"
+  },
+  "about.full_name": {
+    "uz": "Imom Moturidiy xalqaro ilmiy-tadqiqot markazi",
+    "ru": "Международный научно-исследовательский центр Имама Матуриди",
+    "en": "Imam Maturidi International Research Centre"
+  },
+  "about.lead": {
+    "uz": "O‘zbekiston xalqaro islom akademiyasi huzuridagi davlat muassasasi. 2020-yilda O‘zbekiston Respublikasi Prezidentining qarori bilan tashkil etilgan.",
+    "ru": "Государственное учреждение при Международной исламской академии Узбекистана. Создан в 2020 году постановлением Президента Республики Узбекистан.",
+    "en": "A state institution under the International Islamic Academy of Uzbekistan, established in 2020 by a decision of the President of the Republic of Uzbekistan."
+  },
+  "about.mission_t": {
+    "uz": "Vazifalari",
+    "ru": "Задачи",
+    "en": "Mission"
+  },
+  "about.mission_1": {
+    "uz": "Imom Moturidiy va uning izdoshlari bo‘lgan allomalarning ilmiy va diniy-ma’naviy merosini o‘rganish hamda targ‘ib qilish.",
+    "ru": "Изучение и популяризация научного и духовного наследия Имама Матуриди и учёных его школы.",
+    "en": "Studying and promoting the scholarly and spiritual legacy of Imam al-Maturidi and the scholars of his school."
+  },
+  "about.mission_2": {
+    "uz": "Xorijiy mamlakatlarda saqlanayotgan noyob qo‘lyozmalarni aniqlash, nusxalarini O‘zbekistonga keltirish va tadqiq etish.",
+    "ru": "Выявление редких рукописей, хранящихся за рубежом, доставка их копий в Узбекистан и исследование.",
+    "en": "Identifying rare manuscripts held abroad, bringing copies to Uzbekistan and studying them."
+  },
+  "about.mission_3": {
+    "uz": "Jahonning yetakchi moturidiyshunos olimlari bilan hamkorlik, xalqaro anjumanlar va Imom Moturidiy nomidagi xalqaro stipendiya.",
+    "ru": "Сотрудничество с ведущими исследователями матуридизма, международные конференции и стипендия имени Имама Матуриди.",
+    "en": "Cooperation with leading Maturidi scholars worldwide, international conferences and the Imam Maturidi scholarship."
+  },
+  "about.mission_4": {
+    "uz": "Bag‘rikenglik va mo‘tadillik g‘oyalarini yoyish, mutaassib qarashlarga ilmiy asoslangan javoblar tayyorlash.",
+    "ru": "Распространение идей толерантности и умеренности, подготовка научно обоснованных ответов радикальным взглядам.",
+    "en": "Advancing tolerance and moderation, and preparing evidence-based answers to extremist views."
+  },
+  "about.facts_t": {
+    "uz": "Qisqacha",
+    "ru": "Кратко",
+    "en": "At a glance"
+  },
+  "about.f_founded": {
+    "uz": "Tashkil etilgan",
+    "ru": "Основан",
+    "en": "Founded"
+  },
+  "about.f_under": {
+    "uz": "Tashkilot",
+    "ru": "Учредитель",
+    "en": "Parent body"
+  },
+  "about.f_under_v": {
+    "uz": "O‘zbekiston xalqaro islom akademiyasi",
+    "ru": "Международная исламская академия Узбекистана",
+    "en": "International Islamic Academy of Uzbekistan"
+  },
+  "about.f_city": {
+    "uz": "Shahar",
+    "ru": "Город",
+    "en": "City"
+  },
+  "about.f_city_v": {
+    "uz": "Toshkent — Samarqand",
+    "ru": "Ташкент — Самарканд",
+    "en": "Tashkent — Samarkand"
+  },
+  "about.f_site": {
+    "uz": "Rasmiy sayt",
+    "ru": "Официальный сайт",
+    "en": "Official site"
+  },
+  "about.imam_t": {
+    "uz": "Imom Moturidiy kim?",
+    "ru": "Кто такой Имам Матуриди?",
+    "en": "Who was Imam al-Maturidi?"
+  },
+  "about.imam_1": {
+    "uz": "Abu Mansur Muhammad ibn Muhammad al-Moturidiy (870–944) Samarqand yaqinidagi Moturid mahallasida tug‘ilgan. U sunniy aqidasining ikki asosiy maktabidan birining asoschisi bo‘lib, aql va naql muvozanatiga asoslangan ta’limoti bugungi kunda ham dunyo musulmonlarining katta qismi uchun aqidaviy asos hisoblanadi.",
+    "ru": "Абу Мансур Мухаммад ибн Мухаммад аль-Матуриди (870–944) родился в селении Матурид под Самаркандом. Он — основатель одной из двух главных школ суннитского вероучения; его учение, построенное на равновесии разума и предания, и сегодня остаётся вероучительной основой для значительной части мусульман мира.",
+    "en": "Abu Mansur Muhammad ibn Muhammad al-Maturidi (870–944) was born in the village of Maturid near Samarkand. He founded one of the two principal schools of Sunni theology, and his teaching — built on the balance of reason and revelation — remains the doctrinal foundation for a large share of Muslims today."
+  },
+  "about.imam_2": {
+    "uz": "Uning “Ta’vilot al-Qur’on” va “Kitob at-Tavhid” asarlari kalom ilmining asosiy manbalari qatoriga kiradi. 2025-yilda allomaning tavallud topganiga 1155 yil to‘lishi keng nishonlandi.",
+    "ru": "Его труды «Тавилат аль-Куран» и «Китаб ат-Таухид» входят в число основных источников науки калама. В 2025 году широко отмечалось 1155-летие со дня рождения имама.",
+    "en": "His works Ta’wilat al-Qur’an and Kitab al-Tawhid rank among the primary sources of kalam. In 2025 the 1,155th anniversary of his birth was widely marked."
+  },
+  "about.cta": {
+    "uz": "Kutubxonaga o‘tish",
+    "ru": "Перейти в библиотеку",
+    "en": "Go to the library"
+  },
+  "footer.about": {
+    "uz": "Imom Moturidiy xalqaro ilmiy-tadqiqot markazi raqamli kutubxonasi.",
+    "ru": "Цифровая библиотека Международного научно-исследовательского центра Имама Матуриди.",
+    "en": "Digital library of the Imam Maturidi International Research Centre."
+  },
+  "footer.rights": {
+    "uz": "Barcha huquqlar himoyalangan",
+    "ru": "Все права защищены",
+    "en": "All rights reserved"
+  },
+  "footer.contact": {
+    "uz": "Aloqa",
+    "ru": "Контакты",
+    "en": "Contact"
+  }
+}

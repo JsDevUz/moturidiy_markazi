@@ -1,0 +1,508 @@
+/* =====================================================================
+   CHITALKA — o'qish ekrani
+   Mavzular html[data-theme] atributi orqali almashadi.
+   ===================================================================== */
+
+.reader {
+  /* marker ranglari — matn va sahifa rejimida bir xil ishlatiladi */
+  --hl-gold: #E8C43A;
+  --hl-mint: #3FD08A;
+  --hl-sky:  #4BB4F0;
+  --hl-rose: #F2749B;
+
+  --rd-bg:    #EFEFEC;
+  --rd-page:  #FFFFFF;
+  --rd-ink:   #14262B;
+  --rd-ui:    #FFFFFF;
+  --rd-line:  #E2E7E6;
+  --rd-muted: #6A8189;
+  min-height: 100vh;
+  background: var(--rd-bg);
+  color: var(--rd-ink);
+}
+.reader[data-theme="sepia"] { --rd-bg: #E9DEC7; --rd-page: #F6EEDC; --rd-ink: #3B2E1B; --rd-ui: #F6EEDC; --rd-line: #D8C8A6; --rd-muted: #7C6A4C; }
+.reader[data-theme="gray"]  { --rd-bg: #CFD4D5; --rd-page: #E4E8E8; --rd-ink: #1D2A2E; --rd-ui: #E4E8E8; --rd-line: #B6BFC0; --rd-muted: #5C6A6E; }
+.reader[data-theme="night"] { --rd-bg: #0D1416; --rd-page: #162024; --rd-ink: #DCE6E6; --rd-ui: #162024; --rd-line: #2A3A3F; --rd-muted: #8AA0A4; }
+
+/* -------------------------------------------------------------- toolbar */
+.rtop {
+  position: sticky; top: 0; z-index: 40;
+  display: flex; align-items: center; gap: 10px;
+  height: 58px; padding: 0 12px;
+  background: var(--rd-ui); border-bottom: 1px solid var(--rd-line);
+}
+.rtop__title { min-width: 0; }
+.rtop__title b { display: block; font-size: 15px; font-weight: 600; line-height: 1.2;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 34vw; }
+.rtop__title span { font-family: var(--ui); font-size: 12px; color: var(--rd-muted); }
+.rtop__spacer { flex: 1; }
+
+.ricon {
+  width: 40px; height: 40px; flex: 0 0 40px;
+  display: grid; place-items: center; cursor: pointer;
+  background: transparent; border: 1px solid transparent; border-radius: 9px;
+  color: var(--rd-ink);
+  transition: background .14s, border-color .14s, color .14s;
+}
+.ricon:hover { background: rgba(2,205,209,.12); border-color: rgba(2,205,209,.35); }
+.ricon[aria-pressed="true"] { background: var(--brand); color: #04353A; border-color: transparent; }
+
+/* progress chizig'i toolbar tagida */
+.rprogress { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: transparent; }
+.rprogress i { display: block; height: 100%; background: var(--brand); transition: width .25s ease; }
+
+/* ------------------------------------------------------------ maydonlar */
+.rbody { display: flex; align-items: flex-start; }
+.rstage {
+  flex: 1; min-width: 0;
+  display: flex; flex-direction: column; align-items: center;
+  padding: 26px 16px 120px;
+}
+
+.rpage {
+  position: relative;
+  background: var(--rd-page);
+  border-radius: 6px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.16);
+  transform-origin: left center;
+}
+.rpage canvas { display: block; border-radius: 6px; }
+
+/* varaqlash animatsiyasi */
+/* =====================================================================
+   VARAQ AYLANISHI
+   Eski sahifaning tasviri chetidan ushlab burilib ketadi — xuddi kitob
+   varag'idek. Yangi sahifa shu payt ostida chizilib turadi.
+   ===================================================================== */
+.rpage { perspective: 1900px; perspective-origin: 50% 50%; }
+
+.leaf {
+  position: absolute; top: 0; z-index: 8; overflow: hidden;
+  transform-style: preserve-3d; backface-visibility: hidden;
+  will-change: transform;
+  box-shadow: 0 0 26px rgba(0, 0, 0, .22);
+}
+.leaf img { display: block; width: 100%; height: 100%; object-fit: fill; }
+
+/* varaq yuzasidagi yorug'lik: burilish davomida siljiydi */
+.leaf i {
+  position: absolute; inset: 0; display: block;
+  background: linear-gradient(90deg,
+      rgba(0, 0, 0, .32) 0%, rgba(0, 0, 0, .06) 22%,
+      rgba(255, 255, 255, .16) 55%, rgba(0, 0, 0, .3) 100%);
+  opacity: 0;
+}
+
+/* keyingi betga: o'ng chetdan chapga qarab yopiladi */
+.leaf--next {
+  right: 0; transform-origin: left center;
+  animation: leafNext .62s cubic-bezier(.42, .02, .35, 1) forwards;
+}
+.leaf--next i { animation: leafShade .62s cubic-bezier(.42, .02, .35, 1) forwards; }
+@keyframes leafNext {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(-168deg); }
+}
+
+/* oldingi betga: chap chetdan o'ngga ochiladi */
+.leaf--prev {
+  left: 0; transform-origin: right center;
+  animation: leafPrev .62s cubic-bezier(.42, .02, .35, 1) forwards;
+}
+.leaf--prev i { animation: leafShade .62s cubic-bezier(.42, .02, .35, 1) forwards; }
+@keyframes leafPrev {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(168deg); }
+}
+
+@keyframes leafShade {
+  0%   { opacity: 0; }
+  45%  { opacity: .85; }
+  100% { opacity: .35; }
+}
+
+/* varaq ostidagi sahifa biroz "cho'kadi" — chuqurlik shundan seziladi */
+.rpage canvas.is-settling { animation: pageSettle .5s ease both; }
+@keyframes pageSettle {
+  from { transform: scale(.985); opacity: .82; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leaf { display: none; }
+  .rpage canvas.is-settling { animation: none; }
+}
+
+/* pdf.js matn qatlami — belgilash va nusxalash uchun */
+.textLayer {
+  position: absolute; inset: 0; overflow: hidden;
+  opacity: .22; line-height: 1; text-align: initial;
+}
+.textLayer span, .textLayer br {
+  position: absolute; white-space: pre; cursor: text;
+  transform-origin: 0 0; color: transparent;
+}
+.textLayer ::selection { background: rgba(2,205,209,.45); }
+
+/* marker (highlight) qatlami */
+.markLayer { position: absolute; inset: 0; pointer-events: none; }
+.markLayer i {
+  position: absolute; display: block; border-radius: 2px;
+  background: color-mix(in srgb, var(--hl-gold) 42%, transparent);
+  mix-blend-mode: multiply;
+}
+.markLayer i[data-c="mint"] { background: color-mix(in srgb, var(--hl-mint) 40%, transparent); }
+.markLayer i[data-c="sky"]  { background: color-mix(in srgb, var(--hl-sky)  38%, transparent); }
+.markLayer i[data-c="rose"] { background: color-mix(in srgb, var(--hl-rose) 38%, transparent); }
+.reader[data-theme="night"] .markLayer i { mix-blend-mode: screen; opacity: .7; }
+
+/* yuklanish / xato */
+.rstatus {
+  display: flex; flex-direction: column; align-items: center; gap: 14px;
+  padding: 70px 20px; text-align: center; color: var(--rd-muted);
+  font-family: var(--ui); font-size: 14.5px;
+}
+.rspin { width: 34px; height: 34px; animation: rspin 1.5s linear infinite; color: var(--brand); }
+@keyframes rspin { to { transform: rotate(360deg); } }
+
+/* ---------------------------------------------------------- pastki panel */
+.rbottom {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 45;
+  display: flex; align-items: center; gap: 14px;
+  padding: 12px 18px;
+  background: var(--rd-ui); border-top: 1px solid var(--rd-line);
+}
+.rbottom__slider { flex: 1; display: flex; align-items: center; gap: 12px; }
+.rbottom input[type="range"] { flex: 1; accent-color: var(--brand); }
+.rbottom__num {
+  font-family: var(--ui); font-size: 13px; font-weight: 700; color: var(--rd-muted);
+  white-space: nowrap; min-width: 76px; text-align: right;
+}
+@media (min-width: 900px) { .rbottom { left: 0; } .rbottom.with-panel { right: 360px; } }
+
+/* -------------------------------------------------------------- o'ng panel */
+.rpanel {
+  position: sticky; top: 58px; height: calc(100vh - 58px);
+  width: 360px; flex: 0 0 360px; overflow-y: auto;
+  background: var(--rd-ui); border-left: 1px solid var(--rd-line);
+  padding: 20px 18px 100px;
+}
+.rpanel[hidden] { display: none; }
+.rpanel h3 { font-size: 16px; margin-bottom: 12px; }
+.rpanel__sec { padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid var(--rd-line); }
+.rpanel__sec:last-child { border-bottom: 0; }
+.rpanel__label {
+  font-family: var(--ui); font-size: 11px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--rd-muted); margin-bottom: 9px;
+}
+@media (max-width: 899px) {
+  .rpanel {
+    position: fixed; top: 58px; right: 0; z-index: 50;
+    width: min(360px, 88vw); flex: none;
+    box-shadow: -14px 0 40px rgba(0,0,0,.22);
+  }
+}
+
+.themeset { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.themeset button {
+  height: 46px; border-radius: 9px; cursor: pointer;
+  border: 2px solid var(--rd-line); font-family: var(--ui); font-size: 12px; font-weight: 700;
+  display: grid; place-items: center; transition: border-color .15s, transform .12s;
+}
+.themeset button:hover { transform: translateY(-1px); }
+.themeset button[aria-pressed="true"] { border-color: var(--brand); }
+.themeset .th-light  { background: #FFFFFF; color: #14262B; }
+.themeset .th-sepia  { background: #F6EEDC; color: #3B2E1B; }
+.themeset .th-gray   { background: #DDE2E2; color: #1D2A2E; }
+.themeset .th-night  { background: #162024; color: #DCE6E6; }
+.themeset .th-system {
+  /* yarmi oq, yarmi tungi — tizim mavzusiga ishora; matn oq qismida qoladi */
+  background: #FFFFFF; color: #14262B;
+  box-shadow: inset -18px 0 0 0 #162024;
+  padding-right: 18px;
+}
+
+.zoomrow { display: flex; align-items: center; gap: 10px; }
+.zoomrow output { font-family: var(--ui); font-size: 13.5px; font-weight: 700; min-width: 56px; text-align: center; }
+.zoombtn {
+  width: 42px; height: 42px; border-radius: 9px; cursor: pointer;
+  background: transparent; border: 1px solid var(--rd-line); color: var(--rd-ink);
+  display: grid; place-items: center;
+}
+.zoombtn:hover { border-color: var(--brand); color: var(--brand-deep); }
+
+.switchrow { display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  font-family: var(--ui); font-size: 14px; }
+.switch { position: relative; width: 44px; height: 25px; flex: 0 0 44px; }
+.switch input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
+.switch span {
+  position: absolute; inset: 0; border-radius: 999px; background: var(--rd-line);
+  transition: background .18s; pointer-events: none;
+}
+.switch span::after {
+  content: ''; position: absolute; left: 3px; top: 3px; width: 19px; height: 19px;
+  border-radius: 50%; background: #fff; transition: transform .18s;
+  box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+.switch input:checked + span { background: var(--brand); }
+.switch input:checked + span::after { transform: translateX(19px); }
+.switch input:focus-visible + span { outline: 2px solid var(--brand-deep); outline-offset: 2px; }
+
+.itemlist { display: flex; flex-direction: column; gap: 8px; }
+.item {
+  display: flex; gap: 10px; align-items: flex-start;
+  padding: 11px 12px; border-radius: 9px;
+  background: rgba(127,127,127,.07); font-size: 14.5px;
+}
+.item button {
+  margin-left: auto; background: none; border: 0; cursor: pointer;
+  color: var(--rd-muted); padding: 2px; flex: 0 0 auto;
+}
+.item button:hover { color: var(--danger); }
+.item__page {
+  font-family: var(--ui); font-size: 11px; font-weight: 700; letter-spacing: .06em;
+  color: var(--brand-deep); cursor: pointer; background: none; border: 0; padding: 0;
+}
+.reader[data-theme="night"] .item__page { color: var(--brand); }
+
+.rpanel textarea {
+  width: 100%; min-height: 90px; padding: 11px 13px; resize: vertical;
+  font-family: var(--serif); font-size: 15.5px; color: var(--rd-ink);
+  background: var(--rd-page); border: 1px solid var(--rd-line); border-radius: 9px;
+}
+.rpanel textarea:focus { outline: none; border-color: var(--brand); }
+
+/* ---------------------------------------------------- belgilash menyusi */
+.selmenu {
+  position: absolute; z-index: 60; display: none;
+  flex-direction: column; gap: 4px; padding: 5px; border-radius: 11px;
+  background: #12232A; box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+.selmenu.is-on { display: flex; }
+.selmenu__row { display: flex; gap: 2px; align-items: center; }
+.selmenu__colors {
+  gap: 7px; padding: 5px 8px 3px; border-top: 1px solid rgba(255,255,255,.12);
+}
+.selmenu__lab { display: grid; place-items: center; color: #8FA6AB; }
+.selmenu button {
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  padding: 7px 10px; border: 0; border-radius: 8px; cursor: pointer;
+  background: transparent; color: #DCE6E6;
+  font-family: var(--ui); font-size: 10.5px; font-weight: 600;
+}
+.selmenu button:hover { background: rgba(255,255,255,.12); color: #fff; }
+
+/* Marker ranglari. Bu qoida yuqoridagi ".selmenu button" dan keyin va
+   undan kuchliroq bo'lishi shart — aks holda doirachalar ko'rinmay qoladi. */
+.selmenu__colors .hlc {
+  display: block; flex: 0 0 24px;
+  width: 24px; height: 24px; padding: 0; border-radius: 50%; cursor: pointer;
+  background: var(--hlc);
+  border: 2px solid rgba(255, 255, 255, .25);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .35);
+  transition: transform .14s cubic-bezier(.34, 1.56, .64, 1), border-color .15s;
+}
+.selmenu__colors .hlc:hover {
+  background: var(--hlc); transform: scale(1.16); border-color: #fff;
+}
+.selmenu__colors .hlc:active { transform: scale(.92); }
+
+/* ------------------------------------------------------------------- AI */
+.ai { display: flex; flex-direction: column; gap: 12px; }
+.ai__ctx {
+  padding: 10px 13px; border-left: 2px solid var(--brand); border-radius: 0 8px 8px 0;
+  background: rgba(2,205,209,.09); font-size: 14px; font-style: italic; color: var(--rd-muted);
+  max-height: 96px; overflow: auto;
+}
+.ai__msg {
+  padding: 13px 15px; border-radius: 11px; font-size: 15px; line-height: 1.55;
+  background: rgba(127,127,127,.09); white-space: pre-wrap;
+}
+.ai__note { font-family: var(--ui); font-size: 12px; color: var(--rd-muted); }
+.ai__row { display: flex; gap: 8px; }
+.ai__row input {
+  flex: 1; padding: 11px 13px; border-radius: 9px;
+  font-family: var(--ui); font-size: 14px; color: var(--rd-ink);
+  background: var(--rd-page); border: 1px solid var(--rd-line);
+}
+.ai__row input:focus { outline: none; border-color: var(--brand); }
+
+/* =====================================================================
+   Mavzu endi sahifaning O'ZIGA ham qo'llanadi.
+   PDF holsti oq bo'lgani uchun mavzu unga CSS filtri orqali beriladi:
+   tungi rejimda ranglar teskari aylantiriladi, sepiyada issiq tus beriladi.
+   Filtr faqat holstga tegadi — marker va matn qatlami o'z rangida qoladi.
+   ===================================================================== */
+.rpage { background: var(--rd-page); transition: background .25s; }
+.rpage canvas { transition: filter .25s ease; }
+
+/* Oq qog'ozga sepia/kulrang filtri deyarli ta'sir qilmaydi (oq — oqligicha
+   qoladi), shuning uchun ular ustiga "multiply" rejimidagi tus qatlami
+   qo'yiladi. Marker qatlami esa undan yuqorida turadi. */
+.textLayer { z-index: 1; }
+.rpage::after {
+  content: ''; position: absolute; inset: 0; z-index: 2;
+  pointer-events: none; border-radius: 6px;
+  mix-blend-mode: multiply; background: transparent;
+  transition: background .25s ease;
+}
+.markLayer { z-index: 3; }
+
+.reader[data-theme="sepia"] .rpage::after { background: #EEDCB6; }
+.reader[data-theme="sepia"] .rpage canvas { filter: saturate(.9); }
+.reader[data-theme="gray"]  .rpage::after { background: #CDD4D4; }
+.reader[data-theme="gray"]  .rpage canvas { filter: grayscale(.4); }
+.reader[data-theme="night"] .rpage canvas {
+  filter: invert(1) hue-rotate(180deg) brightness(.86) contrast(1.08) saturate(.8);
+}
+.reader[data-theme="night"] .rpage {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .5);
+}
+
+/* panel ichidagi tugmalar mavzuga moslashsin — aks holda tungi rejimda
+   qora matn qora fonda yo'qolib ketadi */
+.rpanel .btn--ghost {
+  color: var(--rd-ink);
+  border-color: var(--rd-line);
+  background: transparent;
+}
+.rpanel .btn--ghost:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+  background: rgba(2, 205, 209, .1);
+}
+.rpanel .btn--primary { background: var(--brand-deep); color: #fff; }
+.rpanel .btn--primary:hover { background: var(--brand); color: #04353A; }
+.reader[data-theme="night"] .rpanel .btn--primary { background: var(--brand); color: #04353A; }
+.rpanel h3, .rpanel .item, .rpanel .switchrow { color: var(--rd-ink); }
+
+/* =====================================================================
+   MATN REJIMI — PDF matni ekranga moslashtirilgan oqim ko'rinishida.
+   Bu haqiqiy HTML matn: belgilash, nusxalash va qidirish odatdagidek
+   ishlaydi, o'lcham o'zgarganda qatorlar qaytadan joylashadi.
+   ===================================================================== */
+.rflow {
+  --rf-size: 18px;
+  --rf-width: 62ch;
+  --rf-lead: 1.75;
+
+  width: 100%;
+  max-width: var(--rf-width);
+  margin: 0 auto;
+  padding: 10px 4px 40px;
+  font-family: var(--serif);
+  font-size: var(--rf-size);
+  line-height: var(--rf-lead);
+  color: var(--rd-ink);
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+.rflow[data-font="sans"] { font-family: var(--ui); }
+
+.rflow p.rf-b {
+  margin: 0 0 .85em;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.rflow h2.rf-b {
+  margin: 1.7em 0 .6em;
+  font-size: 1.24em;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -.01em;
+  text-align: left;
+}
+.rflow .rf-b:first-child { margin-top: 0; }
+
+/* bet chegarasi — progress va xatcho'plar shu belgilarga bog'lanadi */
+.rf-mark {
+  display: flex; align-items: center; gap: 12px;
+  margin: 1.9em 0 1.5em;
+  font-family: var(--ui); font-size: 11px; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--rd-muted); opacity: .7;
+  user-select: none; -webkit-user-select: none;
+}
+.rf-mark::before, .rf-mark::after {
+  content: ''; flex: 1; height: 1px; background: var(--rd-line);
+}
+.rf-mark:first-child { margin-top: 0; }
+
+/* marker */
+.rflow mark.rf-hl {
+  background: color-mix(in srgb, var(--hl-gold) 45%, transparent);
+  color: inherit; border-radius: 2px; padding: 0 .05em;
+}
+.rflow mark.rf-hl[data-c="gold"] { background: color-mix(in srgb, var(--hl-gold) 45%, transparent); }
+.rflow mark.rf-hl[data-c="mint"] { background: color-mix(in srgb, var(--hl-mint) 42%, transparent); }
+.rflow mark.rf-hl[data-c="sky"]  { background: color-mix(in srgb, var(--hl-sky)  40%, transparent); }
+.rflow mark.rf-hl[data-c="rose"] { background: color-mix(in srgb, var(--hl-rose) 40%, transparent); }
+.reader[data-theme="night"] .rflow mark.rf-hl { background: color-mix(in srgb, var(--hl-gold) 28%, transparent); }
+.reader[data-theme="night"] .rflow mark.rf-hl[data-c="mint"] { background: color-mix(in srgb, var(--hl-mint) 26%, transparent); }
+.reader[data-theme="night"] .rflow mark.rf-hl[data-c="sky"]  { background: color-mix(in srgb, var(--hl-sky)  26%, transparent); }
+.reader[data-theme="night"] .rflow mark.rf-hl[data-c="rose"] { background: color-mix(in srgb, var(--hl-rose) 26%, transparent); }
+
+/* qaydlar ro'yxatidagi rang nuqtasi */
+.hldot {
+  width: 10px; height: 10px; flex: 0 0 10px; margin-top: 6px;
+  border-radius: 50%; background: var(--hl-gold);
+}
+.hldot[data-c="mint"] { background: var(--hl-mint); }
+.hldot[data-c="sky"]  { background: var(--hl-sky); }
+.hldot[data-c="rose"] { background: var(--hl-rose); }
+
+/* qidiruvda topilgan xatboshi */
+.rflow .rf-b.is-found {
+  background: rgba(2, 205, 209, .16);
+  border-radius: 6px;
+  box-shadow: 0 0 0 8px rgba(2, 205, 209, .16);
+  transition: background .4s, box-shadow .4s;
+}
+
+.rflow ::selection { background: rgba(2, 205, 209, .32); }
+
+/* matnni tayyorlash chizig'i */
+.rstatus__bar {
+  width: 190px; height: 4px; border-radius: 2px;
+  background: var(--rd-line); overflow: hidden;
+}
+.rstatus__bar i {
+  display: block; height: 100%; width: 0;
+  background: var(--brand); transition: width .25s ease;
+}
+
+/* rejim / shrift tanlagichi */
+.modeset { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.modeset button {
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  height: 42px; border-radius: 9px; cursor: pointer;
+  background: transparent; color: var(--rd-ink);
+  border: 2px solid var(--rd-line);
+  font-family: var(--ui); font-size: 13px; font-weight: 700;
+  transition: border-color .15s, background .15s;
+}
+.modeset button:hover { border-color: var(--brand); }
+.modeset button[aria-pressed="true"] {
+  border-color: var(--brand); background: rgba(2, 205, 209, .12);
+}
+.rpanel__hint {
+  margin: 10px 0 0; font-family: var(--ui); font-size: 12.5px;
+  line-height: 1.5; color: var(--rd-muted);
+}
+
+.rrange { width: 100%; accent-color: var(--brand); }
+
+/* rejimga qarab sozlamalarni ko'rsatish */
+.reader[data-mode="flow"] .page-only { display: none; }
+.reader[data-mode="page"] .flow-only { display: none; }
+.reader[data-mode="flow"] .rstage { padding-left: 20px; padding-right: 20px; }
+
+@media (max-width: 640px) {
+  .rflow { --rf-width: 100%; padding-bottom: 30px; }
+  .reader[data-mode="flow"] .rstage { padding-left: 16px; padding-right: 16px; }
+}
+
+/* pastki paneldagi rejim tugmasi: matn <-> asl sahifa */
+.ricon--mode { position: relative; }
+.ricon--mode span { display: grid; place-items: center; }
+.reader[data-mode="flow"] .modeq__text { display: none; }
+.reader[data-mode="page"] .modeq__page { display: none; }

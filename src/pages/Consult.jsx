@@ -1,181 +1,170 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { questions } from '../data/db';
-import { HelpCircle, Send, CheckCircle2, ChevronDown, ChevronUp, Mail, MessageSquare } from 'lucide-react';
+import { Icon, Shamsa } from '../components/Icons';
 
 export default function Consult() {
-  const { getLoc, t } = useLanguage();
-  const [formData, setFormData] = useState({ name: '', email: '', topic: '', message: '' });
-  const [submitted, setSubmitted] = useState(false);
-  const [openFaqIdx, setOpenFaqIdx] = useState(0);
+  const { t } = useLanguage();
+  const [form, setForm] = useState({ name: '', email: '', topic: 'kalam', text: '' });
+  const [sent, setSent] = useState(false);
+
+  const topics = ['kalam', 'tafsir', 'manuscript', 'general'];
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) return;
-    setSubmitted(true);
-    setFormData({ name: '', email: '', topic: '', message: '' });
+    if (!form.email || !form.text) return;
+    setSent(true);
+    setForm({ name: '', email: '', topic: 'kalam', text: '' });
   };
 
-  // Sample or imported questions for FAQ
-  const faqList = [
+  const sampleQuestions = [
     {
-      q: "Imom Moturidiy markazi kutubxonasidan foydalanish bepulmi?",
-      a: "Ha, markaz elektron kutubxonasidagi barcha kitoblar, tarjimalar va audiokitoblar jamoatchilik uchun mutlaqo bepul va ochiq taqdim etiladi."
+      id: 1,
+      topic: 'kalam',
+      status: 'answered',
+      date: '2026-03-28',
+      q: 'Moturidiylik va Ash’ariylik o‘rtasidagi asosiy farqlar nimada?',
+      a: 'Moturidiylik maktabida aqlni bilish manbai sifatida e’tirof etish darajasi yuqoriroq bo‘lib, fe’liy sifatlarning azaliyligi va husn-qubh masalalarida o‘ziga xos qarashlar mavjud.'
     },
     {
-      q: "Nodir qo‘lyozmalarni yuklab olish imkoniyati bormi?",
-      a: "Qo‘lyozmalarning raqamli nusxalari ilmiy-tadqiqot maqsadida sayt orqali o‘rganish uchun ochiq. Yuqori sifatli arxiv nusxalarini olish uchun rasmiy so‘rov yuborishingiz mumkin."
-    },
-    {
-      q: "Savollarga qancha vaqt ichida javob beriladi?",
-      a: "Markazimiz mutaxassislari ilmiy asoslangan javoblarni 1–3 ish kuni mobaynida ko‘rsatilgan elektron pochta manzilingizga yuborishadi."
-    },
-    {
-      q: "Sayt orqali allomaning audio tafsirlarini tinglash mumkinmi?",
-      a: "Ha, maxsus 'Audiokitoblar' bo‘limida audio fayllar professional suxandonlar va mutaxassislar tomonidan o‘qilgan holatda taqdim etilgan."
+      id: 2,
+      topic: 'tafsir',
+      status: 'answered',
+      date: '2026-03-15',
+      q: 'Ta’vilot al-Qur’on asarining to‘liq nashri mavjudmi?',
+      a: 'Ha, markazimiz tomonidan asarning ilmiy-tanqidiy nashri va o‘zbek tiliga akademik tarjimasi bosqichma-bosqich amalga oshirilmoqda.'
     }
   ];
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+    <div className="wrap" style={{ maxWidth: '1000px' }}>
       
-      {/* Header */}
-      <div className="text-center max-w-2xl mx-auto">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider mb-3">
-          <HelpCircle className="w-4 h-4 text-emerald-600" />
-          <span>{t('nav.consult')}</span>
+      {/* Hero Panel */}
+      <section className="panel tilt is-in" style={{ position: 'relative', overflow: 'hidden', marginBottom: '28px' }}>
+        <div className="panel__pad" style={{ padding: '36px 32px' }}>
+          <Shamsa className="seccard__medallion" />
+          <div className="u-eyebrow">{t('brand.name')}</div>
+          <h1 style={{ margin: '10px 0 14px', maxWidth: '20ch', fontFamily: 'var(--serif)' }}>
+            {t('consult.title')}
+          </h1>
+          <p style={{ maxWidth: '64ch', fontSize: '17.5px', margin: 0, lineHeight: 1.6, color: 'var(--ink-2)' }}>
+            {t('consult.sub')}
+          </p>
         </div>
-        <h1 className="font-serif text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-3">
-          {t('consult.title')}
-        </h1>
-        <p className="text-sm text-slate-500 dark:text-slate-400">
-          {t('consult.desc')}
-        </p>
-      </div>
+      </section>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-        
-        {/* Left Column: Form */}
-        <div className="lg:col-span-7 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200/80 dark:border-slate-800 p-6 sm:p-8 shadow-sm">
-          {submitted ? (
-            <div className="py-12 text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-600 mx-auto flex items-center justify-center">
-                <CheckCircle2 className="w-8 h-8" />
-              </div>
-              <h3 className="font-serif text-2xl font-bold text-slate-900 dark:text-white">
-                Rahmat!
-              </h3>
-              <p className="text-sm text-slate-600 dark:text-slate-400 max-w-md mx-auto">
-                {t('consult.success')}
-              </p>
-              <button
-                onClick={() => setSubmitted(false)}
-                className="mt-4 px-6 py-2.5 rounded-xl bg-emerald-700 text-white font-semibold text-xs hover:bg-emerald-600 transition-colors"
-              >
-                Yangi savol yo‘llash
-              </button>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                  {t('consult.name')} *
+      {sent && (
+        <div className="notice notice--info" style={{ marginBottom: '26px' }}>
+          <Icon name="check" size={20} />
+          <div>{t('consult.sent')}</div>
+        </div>
+      )}
+
+      {/* Steps */}
+      <ol className="steps">
+        {[1, 2, 3].map((n) => (
+          <li key={n}>
+            <span>{n}</span>
+            <p>{t(`consult.how_${n}`)}</p>
+          </li>
+        ))}
+      </ol>
+
+      {/* Consult Form & Side List */}
+      <div className="consult">
+        <div className="panel">
+          <div className="panel__pad" style={{ padding: '28px' }}>
+            <h2 style={{ fontSize: '23px', marginBottom: '6px', fontFamily: 'var(--serif)' }}>
+              {t('consult.form_t')}
+            </h2>
+            <p className="u-ui u-small u-muted" style={{ marginBottom: '20px' }}>
+              {t('consult.how_3')}
+            </p>
+
+            <form onSubmit={handleSubmit} noValidate>
+              <div className="consult__row">
+                <label className="field">
+                  <span className="field__label">{t('consult.name')}</span>
+                  <input 
+                    type="text" 
+                    value={form.name} 
+                    onChange={(e) => setForm({ ...form, name: e.target.value })} 
+                  />
                 </label>
-                <input
-                  type="text"
-                  required
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="Masalan: Abdulloh Umarov"
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/50 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                />
-              </div>
-
-              <div>
-                <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                  {t('consult.email')} *
+                <label className="field">
+                  <span className="field__label">{t('cab.email')} *</span>
+                  <input 
+                    type="email" 
+                    required 
+                    value={form.email} 
+                    onChange={(e) => setForm({ ...form, email: e.target.value })} 
+                  />
                 </label>
-                <input
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  placeholder="nom@domain.uz"
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/50 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                />
               </div>
 
-              <div>
-                <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                  {t('consult.topic')}
-                </label>
-                <input
-                  type="text"
-                  value={formData.topic}
-                  onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
-                  placeholder="Masalan: Ta'vilot al-Qur'on nashrlari bo'yicha"
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/50 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                />
+              <div className="field__label" style={{ marginTop: '16px', marginBottom: '8px' }}>
+                {t('consult.topic')}
+              </div>
+              <div className="topicset">
+                {topics.map((code) => (
+                  <label key={code}>
+                    <input 
+                      type="radio" 
+                      name="topic" 
+                      value={code} 
+                      checked={form.topic === code}
+                      onChange={() => setForm({ ...form, topic: code })}
+                    />
+                    <span>{t(`topic.${code}`)}</span>
+                  </label>
+                ))}
               </div>
 
-              <div>
-                <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                  {t('consult.message')} *
-                </label>
-                <textarea
-                  required
-                  rows={4}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Savolingizni batafsil bayon eting..."
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/50 text-sm text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              <label className="field" style={{ marginTop: '20px' }}>
+                <span className="field__label">{t('consult.text')} *</span>
+                <textarea 
+                  rows={6} 
+                  required 
+                  value={form.text}
+                  onChange={(e) => setForm({ ...form, text: e.target.value })}
+                  placeholder={t('consult.text_ph')}
                 />
-              </div>
+              </label>
 
-              <button
-                type="submit"
-                className="w-full py-3 rounded-xl bg-gradient-to-r from-emerald-700 to-teal-700 hover:from-emerald-600 hover:to-teal-600 text-white font-bold text-sm shadow-md flex items-center justify-center gap-2 transition-all hover:scale-[1.01]"
-              >
-                <Send className="w-4 h-4" />
-                <span>{t('consult.submit')}</span>
+              <button className="btn btn--primary" type="submit" style={{ marginTop: '16px' }}>
+                <Icon name="mail" size={17} /> {t('consult.send')}
               </button>
             </form>
-          )}
-        </div>
-
-        {/* Right Column: FAQ Accordion */}
-        <div className="lg:col-span-5 space-y-4">
-          <h3 className="font-serif text-xl font-bold text-slate-900 dark:text-white mb-4">
-            {t('consult.faq')}
-          </h3>
-
-          <div className="space-y-3">
-            {faqList.map((item, idx) => {
-              const isOpen = openFaqIdx === idx;
-              return (
-                <div
-                  key={idx}
-                  className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 dark:border-slate-800 overflow-hidden shadow-xs"
-                >
-                  <button
-                    onClick={() => setOpenFaqIdx(isOpen ? null : idx)}
-                    className="w-full p-4 text-left font-serif font-bold text-xs sm:text-sm text-slate-800 dark:text-slate-200 flex items-center justify-between gap-3"
-                  >
-                    <span>{item.q}</span>
-                    {isOpen ? <ChevronUp className="w-4 h-4 text-emerald-600 flex-shrink-0" /> : <ChevronDown className="w-4 h-4 text-slate-400 flex-shrink-0" />}
-                  </button>
-
-                  {isOpen && (
-                    <div className="px-4 pb-4 text-xs text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-800/60 pt-3">
-                      {item.a}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
           </div>
         </div>
 
+        {/* Previous questions / FAQ */}
+        <aside>
+          <div className="panel">
+            <div className="panel__pad" style={{ padding: '24px' }}>
+              <h3 style={{ marginBottom: '14px', fontFamily: 'var(--serif)' }}>
+                {t('consult.mine')}
+              </h3>
+              <div className="qlist">
+                {sampleQuestions.map((q) => (
+                  <article key={q.id} className="qitem" style={{ marginBottom: '16px', paddingBottom: '16px', borderBottom: '1px solid var(--line)' }}>
+                    <div className="qitem__head" style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
+                      <span className="chip chip--free">
+                        {t('consult.status_answered')}
+                      </span>
+                      <span className="u-ui u-small u-muted">{q.date}</span>
+                    </div>
+                    <div style={{ fontWeight: 'bold', fontSize: '14px', margin: '4px 0', color: 'var(--ink)' }}>
+                      {q.q}
+                    </div>
+                    <p style={{ fontSize: '13px', color: 'var(--ink-2)', margin: '4px 0 0', lineHeight: 1.5 }}>
+                      {q.a}
+                    </p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </aside>
       </div>
 
     </div>

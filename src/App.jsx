@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { LanguageProvider } from './context/LanguageContext';
 import { ThemeProvider } from './context/ThemeContext';
-import Navbar from './components/Navbar';
+import Topbar from './components/Topbar';
+import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
-import AudioPlayerBar from './components/AudioPlayerBar';
 import Home from './pages/Home';
 import Catalog from './pages/Catalog';
 import BookDetail from './pages/BookDetail';
@@ -12,17 +12,16 @@ import Quiz from './pages/Quiz';
 import Hikmatlar from './pages/Hikmatlar';
 import About from './pages/About';
 import Consult from './pages/Consult';
-import { getBookById } from './data/db';
 
 function MainApp() {
   const [activePage, setActivePage] = useState('home');
   const [selectedBook, setSelectedBook] = useState(null);
-  const [activeAudioBook, setActiveAudioBook] = useState(null);
   const [catalogFilters, setCatalogFilters] = useState({
     search: '',
-    section: 'all',
-    onlyAudio: false
+    section: '',
+    access: ''
   });
+  const [navClosed, setNavClosed] = useState(false);
 
   // Saved books list in localStorage
   const [savedBookIds, setSavedBookIds] = useState(() => {
@@ -39,17 +38,28 @@ function MainApp() {
   }, [savedBookIds]);
 
   const toggleSaveBook = (bookId) => {
-    setSavedBookIds((prev) => 
-      prev.includes(bookId) ? prev.filter(id => id !== bookId) : [...prev, bookId]
+    setSavedBookIds((prev) =>
+      prev.includes(bookId) ? prev.filter((id) => id !== bookId) : [...prev, bookId]
     );
+    const toastEl = document.getElementById('toast');
+    if (toastEl) {
+      toastEl.textContent = savedBookIds.includes(bookId) ? 'O‘chirildi' : 'Saqlandi';
+      toastEl.classList.add('is-on');
+      setTimeout(() => toastEl.classList.remove('is-on'), 2000);
+    }
+  };
+
+  const toggleNav = () => {
+    setNavClosed((prev) => !prev);
+    document.body.classList.toggle('nav-closed');
   };
 
   const handleNavigate = (page, params = {}) => {
-    if (params.search !== undefined || params.section !== undefined || params.onlyAudio !== undefined) {
+    if (params.search !== undefined || params.section !== undefined || params.access !== undefined) {
       setCatalogFilters({
         search: params.search || '',
-        section: params.section || 'all',
-        onlyAudio: !!params.onlyAudio
+        section: params.section || '',
+        access: params.access || ''
       });
     }
     setActivePage(page);
@@ -69,116 +79,118 @@ function MainApp() {
   };
 
   const handleListenBook = (book) => {
-    setActiveAudioBook(book);
+    setSelectedBook(book);
+    setActivePage('detail');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleSelectSection = (sectionId) => {
-    setCatalogFilters({ search: '', section: sectionId, onlyAudio: false });
+    setCatalogFilters({ search: '', section: sectionId, access: '' });
     setActivePage('catalog');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // If in Reader view, render standalone e-reader without standard topbar/sidebar
+  if (activePage === 'reader' && selectedBook) {
+    return (
+      <Reader
+        book={selectedBook}
+        onBack={() => setActivePage('detail')}
+      />
+    );
+  }
+
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-200">
-      
-      {/* If Reader is active, render full-screen clean e-reader mode without standard navbar/footer */}
-      {activePage === 'reader' && selectedBook ? (
-        <Reader
-          book={selectedBook}
-          onBack={() => setActivePage('detail')}
+    <>
+      {/* 1:1 Original Topbar */}
+      <Topbar 
+        onToggleNav={toggleNav}
+        onNavigate={handleNavigate}
+        onSearch={(q) => handleNavigate('catalog', { search: q })}
+        activePage={activePage}
+      />
+
+      <div 
+        className="nav-scrim" 
+        id="navScrim" 
+        hidden={!navClosed} 
+        onClick={toggleNav} 
+      />
+
+      {/* 1:1 Shell Layout */}
+      <div className="shell">
+        <Sidebar 
+          activePage={activePage}
+          onNavigate={handleNavigate}
+          onSelectSection={handleSelectSection}
+          savedCount={savedBookIds.length}
         />
-      ) : (
-        <>
-          {/* Main Top Navigation */}
-          <Navbar 
-            activePage={activePage} 
-            setActivePage={(p) => {
-              if (p === 'audiobooks') {
-                setCatalogFilters({ search: '', section: 'all', onlyAudio: true });
-                setActivePage('catalog');
-              } else if (p === 'sections') {
-                setActivePage('home');
-                setTimeout(() => {
-                  window.scrollTo({ top: 900, behavior: 'smooth' });
-                }, 100);
-              } else {
-                setActivePage(p);
-              }
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }} 
-          />
 
-          {/* Page Routing Views */}
-          <main className="flex-1 pb-16">
-            {activePage === 'home' && (
-              <Home 
-                onNavigate={handleNavigate}
-                onSelectBook={handleSelectBook}
-                onReadBook={handleReadBook}
-                onListenBook={handleListenBook}
-                onSelectSection={handleSelectSection}
-                savedBookIds={savedBookIds}
-                onToggleSaveBook={toggleSaveBook}
-              />
-            )}
-
-            {activePage === 'catalog' && (
-              <Catalog
-                initialSearch={catalogFilters.search}
-                initialSection={catalogFilters.section}
-                onlyAudio={catalogFilters.onlyAudio}
-                onSelectBook={handleSelectBook}
-                onReadBook={handleReadBook}
-                onListenBook={handleListenBook}
-                savedBookIds={savedBookIds}
-                onToggleSaveBook={toggleSaveBook}
-              />
-            )}
-
-            {activePage === 'detail' && selectedBook && (
-              <BookDetail
-                book={selectedBook}
-                onBack={() => setActivePage('catalog')}
-                onRead={handleReadBook}
-                onListen={handleListenBook}
-                onSelectBook={handleSelectBook}
-                isSaved={savedBookIds.includes(selectedBook.id)}
-                onToggleSave={toggleSaveBook}
-              />
-            )}
-
-            {activePage === 'quiz' && (
-              <Quiz onNavigate={handleNavigate} />
-            )}
-
-            {activePage === 'hikmatlar' && (
-              <Hikmatlar />
-            )}
-
-            {activePage === 'about' && (
-              <About />
-            )}
-
-            {activePage === 'consult' && (
-              <Consult />
-            )}
-          </main>
-
-          {/* Global Sticky Audiobook Player */}
-          {activeAudioBook && (
-            <AudioPlayerBar 
-              currentBook={activeAudioBook}
-              onClose={() => setActiveAudioBook(null)}
-              onOpenDetail={(b) => handleSelectBook(b)}
+        <main className="main">
+          {activePage === 'home' && (
+            <Home 
+              onNavigate={handleNavigate}
+              onSelectBook={handleSelectBook}
+              onSelectSection={handleSelectSection}
             />
           )}
 
-          {/* Footer */}
-          <Footer onNavigate={handleNavigate} />
-        </>
-      )}
+          {activePage === 'catalog' && (
+            <Catalog 
+              initialSearch={catalogFilters.search}
+              initialSection={catalogFilters.section}
+              initialAccess={catalogFilters.access}
+              onSelectBook={handleSelectBook}
+            />
+          )}
 
-    </div>
+          {activePage === 'saved' && (
+            <Catalog 
+              initialSearch=""
+              initialSection=""
+              initialAccess=""
+              onSelectBook={handleSelectBook}
+            />
+          )}
+
+          {activePage === 'detail' && selectedBook && (
+            <BookDetail 
+              book={selectedBook}
+              onBack={() => setActivePage('catalog')}
+              onRead={handleReadBook}
+              onListen={handleListenBook}
+              onQuiz={() => setActivePage('quiz')}
+              onSelectBook={handleSelectBook}
+              onSelectSection={handleSelectSection}
+              isSaved={savedBookIds.includes(selectedBook.id)}
+              onToggleSave={toggleSaveBook}
+            />
+          )}
+
+          {activePage === 'quiz' && (
+            <Quiz onNavigate={handleNavigate} />
+          )}
+
+          {activePage === 'hikmatlar' && (
+            <Hikmatlar />
+          )}
+
+          {activePage === 'about' && (
+            <About 
+              onNavigate={handleNavigate}
+              onSelectSection={handleSelectSection}
+            />
+          )}
+
+          {activePage === 'consult' && (
+            <Consult />
+          )}
+
+          {/* 1:1 Original Footer */}
+          <Footer onNavigate={handleNavigate} />
+        </main>
+      </div>
+    </>
   );
 }
 
