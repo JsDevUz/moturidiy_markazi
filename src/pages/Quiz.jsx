@@ -84,10 +84,18 @@ export default function Quiz({ onNavigate }) {
 
   return (
     <div className="wrap">
-      <div className="pagehead">
-        <div className="u-eyebrow">{t('quiz.title')}</div>
-        <h1>{t('quiz.cta')}</h1>
-        <p>Imom Moturidiy hayoti va ilmiy merosi bo‘yicha interaktiv sinov</p>
+      <div className="pagehead" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '16px' }}>
+        <div>
+          <div className="u-eyebrow">{t('quiz.title')}</div>
+          <h1 style={{ margin: '6px 0' }}>{t('quiz.cta')}</h1>
+          <p style={{ margin: 0 }}>Imom Moturidiy hayoti va ilmiy merosi bo‘yicha interaktiv sinov</p>
+        </div>
+        <button 
+          className="btn btn--gold btn--sm" 
+          onClick={() => onNavigate('rating')}
+        >
+          <Icon name="chart" size={16} /> {t('rating.title')}
+        </button>
       </div>
 
       {!isFinished ? (

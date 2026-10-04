@@ -103,23 +103,23 @@ function MainApp() {
   return (
     <>
       {/* 1:1 Original Topbar */}
-      <Topbar 
+      <Topbar
         onToggleNav={toggleNav}
         onNavigate={handleNavigate}
         onSearch={(q) => handleNavigate('catalog', { search: q })}
         activePage={activePage}
       />
 
-      <div 
-        className="nav-scrim" 
-        id="navScrim" 
-        hidden={!navClosed} 
-        onClick={toggleNav} 
+      <div
+        className="nav-scrim"
+        id="navScrim"
+        hidden={!navClosed}
+        onClick={toggleNav}
       />
 
       {/* 1:1 Shell Layout */}
       <div className="shell">
-        <Sidebar 
+        <Sidebar
           activePage={activePage}
           onNavigate={handleNavigate}
           onSelectSection={handleSelectSection}
@@ -128,7 +128,7 @@ function MainApp() {
 
         <main className="main">
           {activePage === 'home' && (
-            <Home 
+            <Home
               onNavigate={handleNavigate}
               onSelectBook={handleSelectBook}
               onSelectSection={handleSelectSection}
@@ -136,7 +136,7 @@ function MainApp() {
           )}
 
           {activePage === 'catalog' && (
-            <Catalog 
+            <Catalog
               initialSearch={catalogFilters.search}
               initialSection={catalogFilters.section}
               initialAccess={catalogFilters.access}
@@ -145,7 +145,7 @@ function MainApp() {
           )}
 
           {activePage === 'saved' && (
-            <Catalog 
+            <Catalog
               initialSearch=""
               initialSection=""
               initialAccess=""
@@ -154,7 +154,7 @@ function MainApp() {
           )}
 
           {activePage === 'detail' && selectedBook && (
-            <BookDetail 
+            <BookDetail
               book={selectedBook}
               onBack={() => setActivePage('catalog')}
               onRead={handleReadBook}
@@ -176,7 +176,7 @@ function MainApp() {
           )}
 
           {activePage === 'about' && (
-            <About 
+            <About
               onNavigate={handleNavigate}
               onSelectSection={handleSelectSection}
             />

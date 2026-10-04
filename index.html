@@ -1,33 +1,36 @@
 <!doctype html>
 <html lang="uz" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/img/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moturidiy markazi — Raqamli kutubxona</title>
-    <meta name="description" content="Imom Moturidiy xalqaro ilmiy-tadqiqot markazi uchun uch tilli raqamli kutubxona." />
-    
-    <!-- Original Fonts preload -->
-    <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/spectral-400.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/manrope-var.woff2">
-    
-    <!-- Original Theme & Reader Stylesheets -->
-    <link rel="stylesheet" href="/css/theme.css">
-    <link rel="stylesheet" href="/css/reader.css">
-    
-    <script>
-      (function () {
-        var saved = localStorage.getItem('site-theme') || 'auto';
-        var dark = saved === 'dark' ||
-                   (saved === 'auto' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
-        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
-        document.documentElement.dataset.themePref = saved;
-      })();
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/img/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moturidiy markazi — Raqamli kutubxona</title>
+  <meta name="description" content="Imom Moturidiy xalqaro ilmiy-tadqiqot markazi uchun uch tilli raqamli kutubxona." />
+
+  <!-- Original Fonts preload -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/spectral-400.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/manrope-var.woff2">
+
+  <!-- Original Theme & Reader Stylesheets -->
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/reader.css">
+
+  <script>
+    (function () {
+      var saved = localStorage.getItem('site-theme') || 'auto';
+      var dark = saved === 'dark' ||
+        (saved === 'auto' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+      document.documentElement.dataset.themePref = saved;
+    })();
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

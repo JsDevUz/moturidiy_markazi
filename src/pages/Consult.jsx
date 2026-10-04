@@ -3,35 +3,51 @@ import { useLanguage } from '../context/LanguageContext';
 import { Icon, Shamsa } from '../components/Icons';
 
 export default function Consult() {
-  const { t } = useLanguage();
-  const [form, setForm] = useState({ name: '', email: '', topic: 'kalam', text: '' });
+  const { t, getLoc } = useLanguage();
+  const [form, setForm] = useState({ name: '', email: '', topic: 'aqida', text: '' });
   const [sent, setSent] = useState(false);
 
-  const topics = ['kalam', 'tafsir', 'manuscript', 'general'];
+  const topics = ['aqida', 'manba', 'qolyozma', 'talim', 'kutubxona', 'boshqa'];
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!form.email || !form.text) return;
     setSent(true);
-    setForm({ name: '', email: '', topic: 'kalam', text: '' });
+    setForm({ name: '', email: '', topic: 'aqida', text: '' });
   };
 
   const sampleQuestions = [
     {
       id: 1,
-      topic: 'kalam',
+      topic: 'aqida',
       status: 'answered',
       date: '2026-03-28',
-      q: 'Moturidiylik va Ash’ariylik o‘rtasidagi asosiy farqlar nimada?',
-      a: 'Moturidiylik maktabida aqlni bilish manbai sifatida e’tirof etish darajasi yuqoriroq bo‘lib, fe’liy sifatlarning azaliyligi va husn-qubh masalalarida o‘ziga xos qarashlar mavjud.'
+      q: {
+        uz: 'Moturidiylik va Ash’ariylik o‘rtasidagi asosiy farqlar nimada?',
+        ru: 'В чем основные различия между матуридитской и ашаритской школами калама?',
+        en: 'What are the main differences between Maturidiyya and Ash‘ariyya schools?'
+      },
+      a: {
+        uz: 'Moturidiylik maktabida aqlni bilish manbai sifatida e’tirof etish darajasi yuqoriroq bo‘lib, fe’liy sifatlarning azaliyligi va husn-qubh masalalarida o‘ziga xos qarashlar mavjud.',
+        ru: 'В матуридизме степень признания разума как источника познания выше; также есть особенности в вопросах извечности деятельных качеств и концепции добра и зла (хусн ва кубх).',
+        en: 'In the Maturidi school, the epistemological role of reason is emphasized, along with distinct views on the eternity of active attributes and moral reasoning (husn and qubh).'
+      }
     },
     {
       id: 2,
-      topic: 'tafsir',
+      topic: 'manba',
       status: 'answered',
       date: '2026-03-15',
-      q: 'Ta’vilot al-Qur’on asarining to‘liq nashri mavjudmi?',
-      a: 'Ha, markazimiz tomonidan asarning ilmiy-tanqidiy nashri va o‘zbek tiliga akademik tarjimasi bosqichma-bosqich amalga oshirilmoqda.'
+      q: {
+        uz: 'Ta’vilot al-Qur’on asarining to‘liq nashri mavjudmi?',
+        ru: 'Существует ли полное издание труда «Та’вилат аль-Куран»?',
+        en: 'Is there a complete edition of "Ta’wilat al-Qur’an" available?'
+      },
+      a: {
+        uz: 'Ha, markazimiz tomonidan asarning ilmiy-tanqidiy nashri va o‘zbek tiliga akademik tarjimasi bosqichma-bosqich amalga oshirilmoqda.',
+        ru: 'Да, нашим центром осуществляется критическое научное издание и поэтапный академический перевод труда.',
+        en: 'Yes, our center is publishing a critical scientific edition along with an academic translation.'
+      }
     }
   ];
 
@@ -154,10 +170,10 @@ export default function Consult() {
                       <span className="u-ui u-small u-muted">{q.date}</span>
                     </div>
                     <div style={{ fontWeight: 'bold', fontSize: '14px', margin: '4px 0', color: 'var(--ink)' }}>
-                      {q.q}
+                      {getLoc(q.q)}
                     </div>
                     <p style={{ fontSize: '13px', color: 'var(--ink-2)', margin: '4px 0 0', lineHeight: 1.5 }}>
-                      {q.a}
+                      {getLoc(q.a)}
                     </p>
                   </article>
                 ))}

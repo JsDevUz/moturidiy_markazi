@@ -3,7 +3,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { useTheme } from '../context/ThemeContext';
 import { Icon, Flag } from './Icons';
 
-export default function Topbar({ onToggleNav, onNavigate, onSearch, activePage }) {
+export default function Topbar({ onToggleNav, onNavigate, onSearch, activePage, user }) {
   const { lang, setLang, t } = useLanguage();
   const { cycleTheme, isSpun } = useTheme();
   const [searchVal, setSearchVal] = useState('');
@@ -88,12 +88,21 @@ export default function Topbar({ onToggleNav, onNavigate, onSearch, activePage }
       </nav>
 
       {/* Auth / Profile button */}
-      <button 
-        className="btn btn--primary btn--sm"
-        onClick={() => onNavigate('quiz')}
-      >
-        {t('auth.login')}
-      </button>
+      {user?.isLoggedIn ? (
+        <button 
+          className="btn btn--primary btn--sm"
+          onClick={() => onNavigate('cabinet')}
+        >
+          <Icon name="user" size={15} /> {user.name || t('nav.cabinet')}
+        </button>
+      ) : (
+        <button 
+          className="btn btn--primary btn--sm"
+          onClick={() => onNavigate('auth')}
+        >
+          {t('auth.login')}
+        </button>
+      )}
     </header>
   );
 }

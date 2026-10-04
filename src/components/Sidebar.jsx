@@ -3,7 +3,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { sections } from '../data/db';
 import { Icon } from './Icons';
 
-export default function Sidebar({ activePage, onNavigate, onSelectSection, savedCount = 0 }) {
+export default function Sidebar({ activePage, onNavigate, onSelectSection, savedCount = 0, user, onLogout }) {
   const { t, getLoc } = useLanguage();
 
   return (
@@ -104,6 +104,35 @@ export default function Sidebar({ activePage, onNavigate, onSelectSection, saved
         >
           <Icon name="sparkle" /> {t('nav.hikmat')}
         </a>
+
+        {user?.isLoggedIn ? (
+          <>
+            <a 
+              className="navlink" 
+              href="#cabinet"
+              onClick={(e) => { e.preventDefault(); onNavigate('cabinet'); }}
+              aria-current={activePage === 'cabinet' ? 'page' : undefined}
+            >
+              <Icon name="user" /> {t('nav.cabinet')}
+            </a>
+            <a 
+              className="navlink" 
+              href="#logout"
+              onClick={(e) => { e.preventDefault(); if (onLogout) onLogout(); }}
+            >
+              <Icon name="logout" /> {t('auth.logout')}
+            </a>
+          </>
+        ) : (
+          <a 
+            className="navlink" 
+            href="#auth"
+            onClick={(e) => { e.preventDefault(); onNavigate('auth'); }}
+            aria-current={activePage === 'auth' ? 'page' : undefined}
+          >
+            <Icon name="user" /> {t('auth.login')}
+          </a>
+        )}
       </div>
     </aside>
   );
