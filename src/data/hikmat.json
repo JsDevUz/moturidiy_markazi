@@ -1,0 +1,93 @@
+[
+  {
+    "text": {
+      "uz": "Aql — bilimning o‘lchovi, naql esa uning chirog‘i: biri ikkinchisisiz to‘liq emas.",
+      "ru": "Разум — мера знания, предание — его светильник: одно без другого неполно.",
+      "en": "Reason is the measure of knowledge and revelation its lamp: neither is complete without the other."
+    },
+    "source": {
+      "uz": "Moturidiy ta’limotidan",
+      "ru": "Из учения Матуриди",
+      "en": "From the Maturidi tradition"
+    },
+    "id": "h-1"
+  },
+  {
+    "text": {
+      "uz": "Ilm izlagan kishi uchun yo‘l uzoq ko‘rinmaydi.",
+      "ru": "Тому, кто ищет знание, дорога не кажется долгой.",
+      "en": "To the one who seeks knowledge, the road never seems long."
+    },
+    "source": {
+      "uz": "Movarounnahr olimlari",
+      "ru": "Учёные Мавераннахра",
+      "en": "Scholars of Transoxiana"
+    },
+    "id": "h-2"
+  },
+  {
+    "text": {
+      "uz": "Bilimni yozib qo‘ygan kishi uni ikki marta o‘rgangan bo‘ladi.",
+      "ru": "Кто записал знание, тот выучил его дважды.",
+      "en": "Whoever writes knowledge down has learned it twice."
+    },
+    "source": {
+      "uz": "Qadimiy hikmat",
+      "ru": "Древняя мудрость",
+      "en": "Classical maxim"
+    },
+    "id": "h-3"
+  },
+  {
+    "text": {
+      "uz": "Kitob — sukut saqlaydigan, lekin hech qachon aldamaydigan ustoz.",
+      "ru": "Книга — учитель, который молчит, но никогда не обманывает.",
+      "en": "A book is a teacher that keeps silent yet never deceives."
+    },
+    "source": {
+      "uz": "Qo‘lyozma hoshiyasidan",
+      "ru": "С полей рукописи",
+      "en": "From a manuscript margin"
+    },
+    "id": "h-4"
+  },
+  {
+    "text": {
+      "uz": "Haqiqatni izlash — uni topganda tan olishga tayyor bo‘lish demakdir.",
+      "ru": "Искать истину — значит быть готовым признать её, когда найдёшь.",
+      "en": "To seek the truth is to be ready to admit it once found."
+    },
+    "source": {
+      "uz": "Kalom majlislaridan",
+      "ru": "Из бесед о каламе",
+      "en": "From the kalam sessions"
+    },
+    "id": "h-5"
+  },
+  {
+    "text": {
+      "uz": "O‘rganish yoshga qarab emas, niyatga qarab bo‘ladi.",
+      "ru": "Учатся не по возрасту, а по намерению.",
+      "en": "Learning follows intention, not age."
+    },
+    "source": {
+      "uz": "Markaz ustozlaridan",
+      "ru": "От наставников центра",
+      "en": "From the centre’s teachers"
+    },
+    "id": "h-6"
+  },
+  {
+    "text": {
+      "uz": "Manbaga qaytmagan fikr — ildizsiz daraxtga o‘xshaydi.",
+      "ru": "Мысль, не возвращающаяся к источнику, подобна дереву без корней.",
+      "en": "A thought that never returns to its source is a tree without roots."
+    },
+    "source": {
+      "uz": "Matnshunoslik qoidalaridan",
+      "ru": "Из правил текстологии",
+      "en": "From the rules of textual study"
+    },
+    "id": "h-7"
+  }
+]

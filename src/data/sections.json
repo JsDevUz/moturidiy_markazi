@@ -1,0 +1,122 @@
+[
+  {
+    "id": "moturidiy",
+    "icon": "star",
+    "on_home": true,
+    "title": {
+      "uz": "Abu Mansur Moturidiy",
+      "ru": "Абу Мансур Матуриди",
+      "en": "Abu Mansur al-Maturidi"
+    },
+    "lead": {
+      "uz": "Alloma hayoti, ilmiy merosi va uning kalom maktabi haqidagi manbalar.",
+      "ru": "Источники о жизни, научном наследии и каламской школе имама.",
+      "en": "Sources on the imam’s life, scholarly legacy and school of kalam."
+    },
+    "intro": {
+      "uz": "Abu Mansur Muhammad ibn Muhammad al-Moturidiy (870–944) — Samarqand yaqinidagi Moturid mahallasida tug‘ilgan, sunniy aqidasining ikki asosiy maktabidan birining asoschisi. Ushbu bo‘limda uning tarjimai holi, asarlari va ta’limotining asoslariga bag‘ishlangan nashrlar to‘plangan.",
+      "ru": "Абу Мансур Мухаммад ибн Мухаммад аль-Матуриди (870–944) — уроженец селения Матурид под Самаркандом, основатель одной из двух главных школ суннитского вероучения. В разделе собраны издания о его биографии, трудах и основах учения.",
+      "en": "Abu Mansur Muhammad ibn Muhammad al-Maturidi (870–944) was born in the village of Maturid near Samarkand and founded one of the two principal schools of Sunni theology. This section gathers publications on his life, works and the foundations of his teaching."
+    }
+  },
+  {
+    "id": "tavilot",
+    "icon": "book",
+    "on_home": true,
+    "title": {
+      "uz": "Ta’vilot al-Qur’on",
+      "ru": "Тавилат аль-Куран",
+      "en": "Ta’wilat al-Qur’an"
+    },
+    "lead": {
+      "uz": "Allomaning bosh tafsir asari, uning jildlari va ilmiy tarjimalari.",
+      "ru": "Главный тафсир имама, его тома и научные переводы.",
+      "en": "The imam’s principal work of exegesis, its volumes and scholarly translations."
+    },
+    "intro": {
+      "uz": "“Ta’vilot al-Qur’on” — Moturidiyning Qur’on tafsiriga bag‘ishlangan asosiy asari. Bo‘limda asarning jildlari, tanqidiy nashrlari va tarjimalari joylashtirilgan.",
+      "ru": "«Тавилат аль-Куран» — основной труд Матуриди по толкованию Корана. В разделе размещены тома произведения, критические издания и переводы.",
+      "en": "Ta’wilat al-Qur’an is al-Maturidi’s central work of Qur’anic exegesis. The section holds its volumes, critical editions and translations."
+    }
+  },
+  {
+    "id": "qolyozma",
+    "icon": "scroll",
+    "on_home": true,
+    "title": {
+      "uz": "Qo‘lyozma va sharhlar",
+      "ru": "Рукописи и комментарии",
+      "en": "Manuscripts & commentaries"
+    },
+    "lead": {
+      "uz": "Qo‘lyozma nusxalar tavsifi, matnshunoslik va klassik sharhlar.",
+      "ru": "Описания рукописных списков, текстология и классические комментарии.",
+      "en": "Descriptions of manuscript copies, textual studies and classical commentaries."
+    },
+    "intro": {
+      "uz": "Markaz jamg‘armasidagi va jahon kutubxonalaridagi qo‘lyozmalar tavsifi, ularning raqamli nusxalari hamda klassik sharh matnlari.",
+      "ru": "Описания рукописей из фонда центра и мировых книгохранилищ, их цифровые копии и тексты классических комментариев.",
+      "en": "Descriptions of manuscripts from the centre’s holdings and world collections, their digital copies and classical commentary texts."
+    }
+  },
+  {
+    "id": "zamonaviy",
+    "icon": "compass",
+    "on_home": true,
+    "title": {
+      "uz": "Zamonaviy tadqiqotlar",
+      "ru": "Современные исследования",
+      "en": "Modern research"
+    },
+    "lead": {
+      "uz": "Bugungi olimlarning monografiyalari, dissertatsiya va maqolalari.",
+      "ru": "Монографии, диссертации и статьи современных учёных.",
+      "en": "Monographs, dissertations and papers by present-day scholars."
+    },
+    "intro": {
+      "uz": "Moturidiy merosi bo‘yicha so‘nggi yillarda chop etilgan monografiyalar, dissertatsiyalar va ilmiy maqolalar to‘plami.",
+      "ru": "Собрание монографий, диссертаций и научных статей последних лет по наследию Матуриди.",
+      "en": "A collection of recent monographs, dissertations and papers on the Maturidi legacy."
+    }
+  },
+  {
+    "id": "resurslar",
+    "icon": "layers",
+    "on_home": true,
+    "title": {
+      "uz": "Resurslar",
+      "ru": "Ресурсы",
+      "en": "Resources"
+    },
+    "lead": {
+      "uz": "O‘quv qo‘llanmalari, bibliografiya va ilmiy manbalar ro‘yxati.",
+      "ru": "Учебные пособия, библиография и перечни научных источников.",
+      "en": "Study guides, bibliography and lists of scholarly sources."
+    },
+    "intro": {
+      "uz": "Talabalar va tadqiqotchilar uchun o‘quv qo‘llanmalari, bibliografik ko‘rsatkichlar va manbalar ro‘yxati.",
+      "ru": "Учебные пособия для студентов и исследователей, библиографические указатели и перечни источников.",
+      "en": "Study guides for students and researchers, bibliographic indexes and source lists."
+    }
+  },
+  {
+    "id": "media",
+    "icon": "play",
+    "on_home": true,
+    "title": {
+      "uz": "Media",
+      "ru": "Медиа",
+      "en": "Media"
+    },
+    "lead": {
+      "uz": "Audio ma’ruzalar, ilmiy suhbatlar va manbalarga asoslangan javoblar.",
+      "ru": "Аудиолекции, научные беседы и обоснованные источниками ответы.",
+      "en": "Audio lectures, scholarly talks and source-based answers."
+    },
+    "intro": {
+      "uz": "Markaz olimlarining ma’ruzalari, ilmiy suhbatlar va anjuman yozuvlari. Shu yerda keng tarqalgan noto‘g‘ri qarashlarga manbalar asosida berilgan ilmiy javoblar ham jamlangan.",
+      "ru": "Лекции учёных центра, научные беседы и записи конференций. Здесь же собраны научно обоснованные ответы на распространённые ошибочные представления.",
+      "en": "Lectures by the centre’s scholars, scholarly conversations and conference recordings, together with source-based answers to widespread misconceptions."
+    }
+  }
+]

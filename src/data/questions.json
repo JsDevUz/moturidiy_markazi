@@ -1,0 +1,54 @@
+[
+  {
+    "id": "Q-1048",
+    "uid": "",
+    "name": "Xojiakbar Mirjamolov",
+    "email": "mirjamolovxojiakbar@gmail.com",
+    "topic": "boshqa",
+    "text": "Assalomu aleykum 123456789",
+    "at": "2026-09-10 00:22",
+    "status": "answered",
+    "answer": "987654321\r\n0221",
+    "answered_by": "Ilmiy bo‘lim",
+    "answered_at": "2026-09-10 00:37"
+  },
+  {
+    "id": "Q-1047",
+    "uid": "u-1",
+    "name": "Aziza Yo‘ldosheva",
+    "email": "aziza@moturidiy.uz",
+    "topic": "talim",
+    "text": "Imom Moturidiy nomidagi xalqaro stipendiyaga qanday hujjat topshiriladi?",
+    "at": "2026-09-07 21:07",
+    "status": "answered",
+    "answer": "Hujjatlar markaz rasmiy saytida e’lon qilingan shakl bo‘yicha qabul qilinadi.",
+    "answered_by": "Ta’lim bo‘limi",
+    "answered_at": "2026-09-07 21:08"
+  },
+  {
+    "id": "Q-1043",
+    "uid": "u-2",
+    "name": "Nodira Karimova",
+    "email": "nodira@example.uz",
+    "topic": "aqida",
+    "text": "Moturidiy va Ash’ariy maktablari orasidagi asosiy farqlar qaysi masalalarda namoyon bo‘ladi? Shu mavzuda o‘zbek tilidagi manbalarni tavsiya qila olasizmi?",
+    "at": "2026-09-01 20:53",
+    "status": "answered",
+    "answer": "Ikki maktab aqidaning asoslarida bir xil, farqlar esa asosan aqlning o‘rni, iymonning ta’rifi va husn-qubh masalasida ko‘rinadi. Kirish uchun kutubxonamizdagi “Kitob at-Tavhid” tarjimasi va “Zamonaviy tadqiqotlar” bo‘limidagi monografiyalarni tavsiya qilamiz.",
+    "answered_by": "Ilmiy bo‘lim",
+    "answered_at": "2026-09-03 20:53"
+  },
+  {
+    "id": "Q-1044",
+    "uid": "",
+    "name": "Shohruh Ismoilov",
+    "email": "shohruh@example.uz",
+    "topic": "qolyozma",
+    "text": "Markaz fondida “Ta’vilot al-Qur’on”ning qaysi qo‘lyozma nusxalari saqlanadi va ularning raqamli nusxasini ko‘rish uchun qanday murojaat qilish kerak?",
+    "at": "2026-09-06 20:53",
+    "status": "new",
+    "answer": "",
+    "answered_by": "",
+    "answered_at": ""
+  }
+]

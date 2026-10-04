@@ -1,0 +1,68 @@
+[
+  {
+    "id": "m-dir",
+    "order": 10,
+    "photo": "",
+    "name": {
+      "uz": "Markaz direktori",
+      "ru": "Директор центра",
+      "en": "Director of the centre"
+    },
+    "role": {
+      "uz": "Direktor",
+      "ru": "Директор",
+      "en": "Director"
+    },
+    "bio": {
+      "uz": "Markaz faoliyatiga umumiy rahbarlik qiladi, ilmiy yo‘nalishlarni belgilaydi.",
+      "ru": "Осуществляет общее руководство центром и определяет научные направления.",
+      "en": "Provides overall leadership of the centre and sets its research agenda."
+    },
+    "email": "",
+    "phone": ""
+  },
+  {
+    "id": "m-dep",
+    "order": 20,
+    "photo": "",
+    "name": {
+      "uz": "Direktor o‘rinbosari",
+      "ru": "Заместитель директора",
+      "en": "Deputy director"
+    },
+    "role": {
+      "uz": "Direktor o‘rinbosari",
+      "ru": "Заместитель директора",
+      "en": "Deputy director"
+    },
+    "bio": {
+      "uz": "Ilmiy-tadqiqot ishlari va xalqaro hamkorlikni muvofiqlashtiradi.",
+      "ru": "Координирует научно-исследовательскую работу и международное сотрудничество.",
+      "en": "Coordinates research work and international cooperation."
+    },
+    "email": "",
+    "phone": ""
+  },
+  {
+    "id": "m-sci",
+    "order": 30,
+    "photo": "",
+    "name": {
+      "uz": "Ilmiy bo‘lim boshlig‘i",
+      "ru": "Руководитель научного отдела",
+      "en": "Head of the research department"
+    },
+    "role": {
+      "uz": "Ilmiy bo‘lim",
+      "ru": "Научный отдел",
+      "en": "Research department"
+    },
+    "bio": {
+      "uz": "Qo‘lyozmalarni o‘rganish, nashrlar tayyorlash va murojaatlarga javob berish bilan shug‘ullanadi.",
+      "ru": "Занимается изучением рукописей, подготовкой изданий и ответами на обращения.",
+      "en": "Studies manuscripts, prepares editions and answers enquiries."
+    },
+    "email": "",
+    "phone": ""
+  }
+]

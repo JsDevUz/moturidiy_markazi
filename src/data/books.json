@@ -1,0 +1,418 @@
+[
+  {
+    "id": "e102a4ec-468c-42cb-8216-e1e5cc131acd",
+    "title": {
+      "uz": "Imom Moturidiy",
+      "ru": "Имом Мотуридий",
+      "en": "Imam al-Maturidi"
+    },
+    "author": {
+      "uz": "Shovosil Ziyodov",
+      "ru": "Шовосил Зиёдов",
+      "en": "Shovosil Ziyodov"
+    },
+    "section": "moturidiy",
+    "category": "ilmiy",
+    "lang": "uz",
+    "year": 2020,
+    "pages": 32,
+    "price": 0,
+    "has_audio": true,
+    "audio_seconds": 51,
+    "popularity": 96,
+    "added": "2026-02-14",
+    "cover": "covers/e102a4ec-468c-42cb-8216-e1e5cc131acd.png",
+    "file": "books/e102a4ec-468c-42cb-8216-e1e5cc131acd.pdf",
+    "description": {
+      "uz": "“Buyuk ajdodlarimiz” turkumidagi ocherk: allomaning hayoti, Samarqand ilmiy muhiti va kalom maktabining shakllanishi.",
+      "ru": "Очерк из серии «Великие предки»: жизнь имама, научная среда Самарканда и становление каламской школы.",
+      "en": "An essay from the “Great ancestors” series: the imam’s life, the scholarly milieu of Samarkand and the rise of his school of kalam."
+    },
+    "audio_file": "audio/namuna.mp3",
+    "shared_file": false
+  },
+  {
+    "id": "9a851547-ed2d-4a32-92dc-8aff5b75ddcb",
+    "title": {
+      "uz": "Movarounnahrlik o‘n faqih",
+      "ru": "Мовароуннаҳрлик ўн фақиҳ",
+      "en": "Ten jurists of Transoxiana"
+    },
+    "author": {
+      "uz": "Lobar Asrorova",
+      "ru": "Лобар Асророва",
+      "en": "Lobar Asrorova"
+    },
+    "section": "zamonaviy",
+    "category": "ilmiy",
+    "lang": "uz",
+    "year": 2021,
+    "pages": 48,
+    "price": 0,
+    "has_audio": false,
+    "audio_seconds": 0,
+    "popularity": 71,
+    "added": "2026-03-02",
+    "cover": "covers/9a851547-ed2d-4a32-92dc-8aff5b75ddcb.png",
+    "file": "books/9a851547-ed2d-4a32-92dc-8aff5b75ddcb.pdf",
+    "description": {
+      "uz": "Movarounnahr fiqh maktabining o‘n nafar yirik namoyandasi haqida qisqa ilmiy ocherklar.",
+      "ru": "Краткие научные очерки о десяти крупнейших представителях фикха Мавераннахра.",
+      "en": "Short scholarly essays on ten leading figures of Transoxianian jurisprudence."
+    },
+    "audio_file": "",
+    "shared_file": false
+  },
+  {
+    "id": "1d4b866e-0b6b-4556-8881-0cc778e02373",
+    "title": {
+      "uz": "Al-Moturidiy — haqiqiy yo‘l imomi",
+      "ru": "Ал-Матуриди — имам истинного пути",
+      "en": "Al-Maturidi — imam of the true path"
+    },
+    "author": {
+      "uz": "Ramil Adigamov",
+      "ru": "Адыгамов Рамиль Камилович",
+      "en": "Ramil Adygamov"
+    },
+    "section": "moturidiy",
+    "category": "ilmiy",
+    "lang": "ru",
+    "year": 2019,
+    "pages": 56,
+    "price": 0,
+    "has_audio": true,
+    "audio_seconds": 51,
+    "popularity": 84,
+    "added": "2026-01-20",
+    "cover": "covers/1d4b866e-0b6b-4556-8881-0cc778e02373.png",
+    "file": "books/1d4b866e-0b6b-4556-8881-0cc778e02373.pdf",
+    "description": {
+      "uz": "Rus tilidagi nashr: allomaning aqidaviy ta’limoti va uning bugungi ahamiyati.",
+      "ru": "Издание на русском языке: вероучение имама и его значение сегодня.",
+      "en": "A Russian-language edition on the imam’s doctrine and its significance today."
+    },
+    "audio_file": "audio/namuna.mp3",
+    "shared_file": false
+  },
+  {
+    "id": "tavilot-1",
+    "title": {
+      "uz": "Ta’vilot al-Qur’on. 1-jild",
+      "ru": "Тавилат аль-Куран. Том 1",
+      "en": "Ta’wilat al-Qur’an. Volume 1"
+    },
+    "author": {
+      "uz": "Abu Mansur al-Moturidiy",
+      "ru": "Абу Мансур аль-Матуриди",
+      "en": "Abu Mansur al-Maturidi"
+    },
+    "section": "tavilot",
+    "category": "ilmiy",
+    "lang": "ar",
+    "year": 2024,
+    "pages": 612,
+    "price": 45000,
+    "has_audio": true,
+    "audio_seconds": 51,
+    "popularity": 88,
+    "added": "2026-04-11",
+    "cover": "",
+    "file": "books/e102a4ec-468c-42cb-8216-e1e5cc131acd.pdf",
+    "description": {
+      "uz": "Tanqidiy nashrning birinchi jildi: Fotiha va Baqara suralari tafsiri, izohlar bilan.",
+      "ru": "Первый том критического издания: толкование сур «Фатиха» и «Бакара» с комментариями.",
+      "en": "Volume one of the critical edition: exegesis of Surahs al-Fatiha and al-Baqara with notes."
+    },
+    "audio_file": "audio/namuna.mp3",
+    "shared_file": true
+  },
+  {
+    "id": "tavilot-2",
+    "title": {
+      "uz": "Ta’vilot al-Qur’on. 2-jild",
+      "ru": "Тавилат аль-Куран. Том 2",
+      "en": "Ta’wilat al-Qur’an. Volume 2"
+    },
+    "author": {
+      "uz": "Abu Mansur al-Moturidiy",
+      "ru": "Абу Мансур аль-Матуриди",
+      "en": "Abu Mansur al-Maturidi"
+    },
+    "section": "tavilot",
+    "category": "ilmiy",
+    "lang": "ar",
+    "year": 2024,
+    "pages": 588,
+    "price": 45000,
+    "has_audio": false,
+    "audio_seconds": 0,
+    "popularity": 62,
+    "added": "2026-04-11",
+    "cover": "",
+    "file": "books/e102a4ec-468c-42cb-8216-e1e5cc131acd.pdf",
+    "description": {
+      "uz": "Ikkinchi jild: Oli Imron va Niso suralari tafsiri.",
+      "ru": "Второй том: толкование сур «Аль Имран» и «Ниса».",
+      "en": "Volume two: exegesis of Surahs Al Imran and an-Nisa."
+    },
+    "audio_file": "",
+    "shared_file": true
+  },
+  {
+    "id": "kitob-tavhid",
+    "title": {
+      "uz": "Kitob at-Tavhid",
+      "ru": "Китаб ат-Таухид",
+      "en": "Kitab al-Tawhid"
+    },
+    "author": {
+      "uz": "Abu Mansur al-Moturidiy",
+      "ru": "Абу Мансур аль-Матуриди",
+      "en": "Abu Mansur al-Maturidi"
+    },
+    "section": "moturidiy",
+    "category": "ilmiy",
+    "lang": "uz",
+    "year": 2023,
+    "pages": 340,
+    "price": 0,
+    "has_audio": true,
+    "audio_seconds": 51,
+    "popularity": 93,
+    "added": "2026-03-28",
+    "cover": "",
+    "file": "books/1d4b866e-0b6b-4556-8881-0cc778e02373.pdf",
+    "description": {
+      "uz": "Kalom ilmining asosiy manbasi — o‘zbek tiliga ilmiy izohlar bilan tarjima.",
+      "ru": "Основополагающий труд по каламу — перевод с научными комментариями.",
+      "en": "The foundational work of kalam, translated with scholarly commentary."
+    },
+    "audio_file": "audio/namuna.mp3",
+    "shared_file": true
+  },
+  {
+    "id": "qolyozma-katalog",
+    "title": {
+      "uz": "Movarounnahr qo‘lyozmalari katalogi",
+      "ru": "Каталог рукописей Мавераннахра",
+      "en": "Catalogue of Transoxianian manuscripts"
+    },
+    "author": {
+      "uz": "Markaz matnshunoslik bo‘limi",
+      "ru": "Отдел текстологии центра",
+      "en": "Textual studies department"
+    },
+    "section": "qolyozma",
+    "category": "ilmiy",
+    "lang": "uz",
+    "year": 2022,
+    "pages": 214,
+    "price": 0,
+    "has_audio": false,
+    "audio_seconds": 0,
+    "popularity": 45,
+    "added": "2026-02-05",
+    "cover": "",
+    "file": "books/9a851547-ed2d-4a32-92dc-8aff5b75ddcb.pdf",
+    "description": {
+      "uz": "Markaz jamg‘armasidagi 180 dan ortiq qo‘lyozmaning ilmiy tavsifi.",
+      "ru": "Научное описание более 180 рукописей из фонда центра.",
+      "en": "Scholarly descriptions of more than 180 manuscripts held by the centre."
+    },
+    "audio_file": "",
+    "shared_file": true
+  },
+  {
+    "id": "sharh-fiqh-akbar",
+    "title": {
+      "uz": "Sharh al-Fiqh al-Akbar",
+      "ru": "Шарх аль-Фикх аль-Акбар",
+      "en": "Sharh al-Fiqh al-Akbar"
+    },
+    "author": {
+      "uz": "Abu Mansur al-Moturidiy (nisbat qilingan)",
+      "ru": "Абу Мансур аль-Матуриди (атрибуция)",
+      "en": "Attributed to Abu Mansur al-Maturidi"
+    },
+    "section": "qolyozma",
+    "category": "ilmiy",
+    "lang": "ar",
+    "year": 2023,
+    "pages": 276,
+    "price": 30000,
+    "has_audio": false,
+    "audio_seconds": 0,
+    "popularity": 58,
+    "added": "2026-01-09",
+    "cover": "",
+    "file": "books/1d4b866e-0b6b-4556-8881-0cc778e02373.pdf",
+    "description": {
+      "uz": "Klassik sharh matni va uning qo‘lyozma nusxalari qiyosiy tahlili.",
+      "ru": "Текст классического комментария и сравнительный анализ его рукописных списков.",
+      "en": "The classical commentary text with a comparative analysis of its manuscript copies."
+    },
+    "audio_file": "",
+    "shared_file": true
+  },
+  {
+    "id": "kalom-zamonaviy",
+    "title": {
+      "uz": "Moturidiy kalomi va zamonaviy tafakkur",
+      "ru": "Калам Матуриди и современное мышление",
+      "en": "Maturidi kalam and modern thought"
+    },
+    "author": {
+      "uz": "N. Rahmonqulov",
+      "ru": "Н. Рахманкулов",
+      "en": "N. Rahmonqulov"
+    },
+    "section": "zamonaviy",
+    "category": "ilmiy",
+    "lang": "uz",
+    "year": 2025,
+    "pages": 198,
+    "price": 0,
+    "has_audio": true,
+    "audio_seconds": 51,
+    "popularity": 77,
+    "added": "2026-05-16",
+    "cover": "",
+    "file": "books/9a851547-ed2d-4a32-92dc-8aff5b75ddcb.pdf",
+    "description": {
+      "uz": "Aql va naql muvozanati g‘oyasining bugungi ijtimoiy tafakkurdagi o‘rni.",
+      "ru": "Идея равновесия разума и предания в современном общественном мышлении.",
+      "en": "The balance of reason and revelation in contemporary social thought."
+    },
+    "audio_file": "audio/namuna.mp3",
+    "shared_file": true
+  },
+  {
+    "id": "aqida-darslik",
+    "title": {
+      "uz": "Aqida asoslari: o‘quv qo‘llanma",
+      "ru": "Основы вероучения: учебное пособие",
+      "en": "Foundations of doctrine: a study guide"
+    },
+    "author": {
+      "uz": "Markaz o‘quv bo‘limi",
+      "ru": "Учебный отдел центра",
+      "en": "Education department"
+    },
+    "section": "resurslar",
+    "category": "ilmiy",
+    "lang": "uz",
+    "year": 2025,
+    "pages": 156,
+    "price": 0,
+    "has_audio": false,
+    "audio_seconds": 0,
+    "popularity": 64,
+    "added": "2026-05-30",
+    "cover": "",
+    "file": "books/e102a4ec-468c-42cb-8216-e1e5cc131acd.pdf",
+    "description": {
+      "uz": "Oliy o‘quv yurtlari talabalari uchun mo‘ljallangan qo‘llanma, savol va topshiriqlar bilan.",
+      "ru": "Пособие для студентов вузов с вопросами и заданиями.",
+      "en": "A university-level guide with questions and exercises."
+    },
+    "audio_file": "",
+    "shared_file": true
+  },
+  {
+    "id": "bibliografiya",
+    "title": {
+      "uz": "Ilmiy manbalar bibliografiyasi",
+      "ru": "Библиография научных источников",
+      "en": "Bibliography of scholarly sources"
+    },
+    "author": {
+      "uz": "Markaz kutubxonasi",
+      "ru": "Библиотека центра",
+      "en": "Centre library"
+    },
+    "section": "resurslar",
+    "category": "ilmiy",
+    "lang": "ru",
+    "year": 2026,
+    "pages": 92,
+    "price": 0,
+    "has_audio": false,
+    "audio_seconds": 0,
+    "popularity": 31,
+    "added": "2026-06-08",
+    "cover": "",
+    "file": "books/9a851547-ed2d-4a32-92dc-8aff5b75ddcb.pdf",
+    "description": {
+      "uz": "1990–2026 yillarda chop etilgan tadqiqotlarning izohli ro‘yxati.",
+      "ru": "Аннотированный перечень исследований, изданных в 1990–2026 годах.",
+      "en": "An annotated list of studies published between 1990 and 2026."
+    },
+    "audio_file": "",
+    "shared_file": true
+  },
+  {
+    "id": "javoblar-1",
+    "title": {
+      "uz": "Mutaassib qarashlarga ilmiy javoblar",
+      "ru": "Научные ответы на радикальные взгляды",
+      "en": "Scholarly answers to extremist views"
+    },
+    "author": {
+      "uz": "Mualliflar jamoasi",
+      "ru": "Коллектив авторов",
+      "en": "Collective of authors"
+    },
+    "section": "media",
+    "category": "ilmiy",
+    "lang": "uz",
+    "year": 2025,
+    "pages": 168,
+    "price": 0,
+    "has_audio": false,
+    "audio_seconds": 0,
+    "popularity": 82,
+    "added": "2026-04-25",
+    "cover": "",
+    "file": "books/1d4b866e-0b6b-4556-8881-0cc778e02373.pdf",
+    "description": {
+      "uz": "Eng ko‘p tarqalgan yigirma da’voning manbalar asosidagi tahlili.",
+      "ru": "Разбор двадцати самых распространённых утверждений на основе источников.",
+      "en": "A source-based analysis of the twenty most widespread claims."
+    },
+    "audio_file": "",
+    "shared_file": true
+  },
+  {
+    "id": "maruza-media",
+    "title": {
+      "uz": "Ma’ruzalar turkumi: Samarqand kalom maktabi",
+      "ru": "Цикл лекций: Самаркандская школа калама",
+      "en": "Lecture series: the Samarkand school of kalam"
+    },
+    "author": {
+      "uz": "Markaz ilmiy kengashi",
+      "ru": "Научный совет центра",
+      "en": "Academic council"
+    },
+    "section": "media",
+    "category": "ilmiy",
+    "lang": "uz",
+    "year": 2026,
+    "pages": 40,
+    "price": 0,
+    "has_audio": true,
+    "audio_seconds": 51,
+    "popularity": 55,
+    "added": "2026-06-19",
+    "cover": "",
+    "file": "books/e102a4ec-468c-42cb-8216-e1e5cc131acd.pdf",
+    "description": {
+      "uz": "Sakkiz ma’ruzadan iborat audio turkum va ularning matn tayanchi.",
+      "ru": "Аудиоцикл из восьми лекций и текстовая опора к ним.",
+      "en": "An eight-part audio series with accompanying text."
+    },
+    "audio_file": "audio/namuna.mp3",
+    "shared_file": true
+  }
+]

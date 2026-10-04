@@ -1,0 +1,281 @@
+{
+  "e102a4ec-468c-42cb-8216-e1e5cc131acd": {
+    "questions": [
+      {
+        "id": "q-2c7545",
+        "q": "Abu Mansur Moturidiy qaysi shahar yaqinida tug‘ilgan?",
+        "options": [
+          "Termiz",
+          "Marv",
+          "Samarqand",
+          "Buxoro"
+        ],
+        "correct": 2
+      },
+      {
+        "id": "q-232731",
+        "q": "Allomaning nisbasi qaysi joy nomidan olingan?",
+        "options": [
+          "Motur qishlog‘i",
+          "Moturiya vodiysi",
+          "Moturid mahallasi",
+          "Motrud qal’asi"
+        ],
+        "correct": 2
+      },
+      {
+        "id": "q-396c5b",
+        "q": "Imom Moturidiy taxminan qaysi yilda vafot etgan?",
+        "options": [
+          "1111-yil",
+          "944-yil",
+          "1037-yil",
+          "870-yil"
+        ],
+        "correct": 1
+      },
+      {
+        "id": "q-cd0b04",
+        "q": "Alloma taxminan qaysi yilda tug‘ilgan?",
+        "options": [
+          "950-yil",
+          "870-yil",
+          "1050-yil",
+          "770-yil"
+        ],
+        "correct": 1
+      },
+      {
+        "id": "q-cad697",
+        "q": "“Kitob at-Tavhid” asari qaysi ilm sohasiga oid?",
+        "options": [
+          "Kalom",
+          "Astronomiya",
+          "Grammatika",
+          "Tibbiyot"
+        ],
+        "correct": 0
+      },
+      {
+        "id": "q-3879d8",
+        "q": "Allomaning Qur’on tafsiriga bag‘ishlangan bosh asari qaysi?",
+        "options": [
+          "Al-Muvatto",
+          "Ihyou ulumid-din",
+          "Ta’vilot al-Qur’on",
+          "Al-Jome’ as-sahih"
+        ],
+        "correct": 2
+      },
+      {
+        "id": "q-351e99",
+        "q": "Imom Moturidiy fiqhda qaysi mazhabga mansub?",
+        "options": [
+          "Hanafiy",
+          "Molikiy",
+          "Shofe’iy",
+          "Hanbaliy"
+        ],
+        "correct": 0
+      },
+      {
+        "id": "q-f45d55",
+        "q": "Sunniy aqidasining ikkinchi asosiy maktabiga kim asos solgan?",
+        "options": [
+          "Imom Termiziy",
+          "Imom Buxoriy",
+          "Abu Homid G‘azzoliy",
+          "Abul Hasan Ash’ariy"
+        ],
+        "correct": 3
+      },
+      {
+        "id": "q-20b3f5",
+        "q": "Moturidiy ta’limotining markaziy tamoyili nima?",
+        "options": [
+          "Tasavvufiy kashf",
+          "Faqat naqlga tayanish",
+          "Faqat aqlga tayanish",
+          "Aql va naql muvozanati"
+        ],
+        "correct": 3
+      },
+      {
+        "id": "q-161eb7",
+        "q": "Imom Moturidiy qaysi qabristonda dafn etilgan?",
+        "options": [
+          "Samarqanddagi Chokardiza",
+          "Termizdagi Sulton Saodat",
+          "Toshkentdagi Shayxontohur",
+          "Buxorodagi Bahouddin"
+        ],
+        "correct": 0
+      },
+      {
+        "id": "q-b130c8",
+        "q": "Imom Moturidiy xalqaro ilmiy-tadqiqot markazi qaysi yilda tashkil etilgan?",
+        "options": [
+          "2010-yil",
+          "2016-yil",
+          "2023-yil",
+          "2020-yil"
+        ],
+        "correct": 3
+      },
+      {
+        "id": "q-671863",
+        "q": "Markaz qaysi oliy ta’lim muassasasi huzurida faoliyat yuritadi?",
+        "options": [
+          "O‘zbekiston xalqaro islom akademiyasi",
+          "Toshkent davlat sharqshunoslik universiteti",
+          "Samarqand davlat universiteti",
+          "O‘zbekiston Milliy universiteti"
+        ],
+        "correct": 0
+      },
+      {
+        "id": "q-b44d7a",
+        "q": "2025-yilda allomaning tavallud topganiga necha yil to‘ldi?",
+        "options": [
+          "1000 yil",
+          "1200 yil",
+          "1155 yil",
+          "1100 yil"
+        ],
+        "correct": 2
+      },
+      {
+        "id": "q-38d2f6",
+        "q": "Imom Moturidiy qaysi sulola hukmronligi davrida yashagan?",
+        "options": [
+          "Somoniylar",
+          "Temuriylar",
+          "Saljuqiylar",
+          "Shayboniylar"
+        ],
+        "correct": 0
+      },
+      {
+        "id": "q-3bad62",
+        "q": "“Movarounnahr” atamasi qaysi hududni bildiradi?",
+        "options": [
+          "Xuroson tog‘lari",
+          "Amudaryo va Sirdaryo oralig‘i",
+          "Kaspiy bo‘yi",
+          "Dashti Qipchoq"
+        ],
+        "correct": 1
+      },
+      {
+        "id": "q-284136",
+        "q": "Hanafiy mazhabiga kim asos solgan?",
+        "options": [
+          "Imom Molik",
+          "Imom Shofe’iy",
+          "Ahmad ibn Hanbal",
+          "Abu Hanifa"
+        ],
+        "correct": 3
+      },
+      {
+        "id": "q-08702c",
+        "q": "Kalom ilmi nimani o‘rganadi?",
+        "options": [
+          "Aqida asoslarini aqliy dalillar bilan",
+          "Arab tili sarfini",
+          "Meros taqsimini",
+          "Hadis roviylarini"
+        ],
+        "correct": 0
+      },
+      {
+        "id": "q-95ef7a",
+        "q": "“Ta’vilot al-Qur’on” qaysi asrda yozilgan?",
+        "options": [
+          "XVI asr",
+          "XIII asr",
+          "VII asr",
+          "X asr"
+        ],
+        "correct": 3
+      },
+      {
+        "id": "q-e0e11a",
+        "q": "Allomaga berilgan sharafli laqablardan biri qaysi?",
+        "options": [
+          "Imom al-Hudo",
+          "Zayniddin",
+          "Sayfiddin",
+          "Shayx ur-rais"
+        ],
+        "correct": 0
+      },
+      {
+        "id": "q-0f030f",
+        "q": "Abu Hafs Kabir qaysi shahardagi fiqh maktabi bilan bog‘liq?",
+        "options": [
+          "Buxoro",
+          "Samarqand",
+          "Xiva",
+          "Termiz"
+        ],
+        "correct": 0
+      },
+      {
+        "id": "q-1addc1",
+        "q": "Imom Buxoriy xalqaro ilmiy-tadqiqot markazi qaysi shaharda joylashgan?",
+        "options": [
+          "Termiz",
+          "Buxoro",
+          "Samarqand",
+          "Toshkent"
+        ],
+        "correct": 2
+      },
+      {
+        "id": "q-8076eb",
+        "q": "“Fiqh al-Akbar” asari kimga nisbat beriladi?",
+        "options": [
+          "Imom G‘azzoliy",
+          "Imom Nasafiy",
+          "Imom Moturidiy",
+          "Abu Hanifa"
+        ],
+        "correct": 3
+      },
+      {
+        "id": "q-1dd5c8",
+        "q": "Moturidiya ta’limoti bugun asosan qaysi mintaqalarda keng tarqalgan?",
+        "options": [
+          "Shimoliy Afrika",
+          "Janubiy Amerika",
+          "G‘arbiy Yevropa",
+          "Markaziy Osiyo, Turkiya va Hindiston yarimoroli"
+        ],
+        "correct": 3
+      },
+      {
+        "id": "q-eb855d",
+        "q": "Markazning asosiy vazifalaridan biri nima?",
+        "options": [
+          "Savdo shartnomalari tuzish",
+          "Sport musobaqalari o‘tkazish",
+          "Qishloq xo‘jaligini rivojlantirish",
+          "Xorijdagi noyob qo‘lyozmalar nusxalarini keltirish va tadqiq etish"
+        ],
+        "correct": 3
+      },
+      {
+        "id": "q-2b5c69",
+        "q": "Moturidiy maktabi qaysi g‘oyalarni ilgari suradi?",
+        "options": [
+          "Bag‘rikenglik va mo‘tadillik",
+          "Yakkalanish va qat’iylik",
+          "Dunyodan butunlay voz kechish",
+          "Ilmni inkor etish"
+        ],
+        "correct": 0
+      }
+    ]
+  }
+}
